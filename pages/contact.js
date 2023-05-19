@@ -8,11 +8,11 @@ function contact() {
   return (
     <>
       <Head>
-        <title>Aya Li - Contact</title>
+        <title>AYA LI - Contact</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Contact"
+          content="AYA LI - Digitial Marketing Consultant - Contact"
         ></meta>
       </Head>
       <div>

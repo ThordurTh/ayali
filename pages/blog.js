@@ -23,11 +23,11 @@ export default function blog({ articles }) {
   return (
     <>
       <Head>
-        <title>Aya Li - Blog</title>
+        <title>AYA LI - Blog</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Blog"
+          content="AYA LI - Digitial Marketing Consultant - Blog"
         ></meta>
       </Head>
 

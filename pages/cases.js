@@ -6,11 +6,11 @@ function cases() {
   return (
     <>
       <Head>
-        <title>Aya Li - Cases</title>
+        <title>AYA LI - Cases</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Cases"
+          content="AYA LI - Digitial Marketing Consultant - Cases"
         ></meta>
       </Head>
       <div>

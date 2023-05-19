@@ -8,11 +8,11 @@ function company() {
   return (
     <>
       <Head>
-        <title>Aya Li - Company</title>
+        <title>AYA LI - Company</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Company"
+          content="AYA LI - Digitial Marketing Consultant - Company"
         ></meta>
       </Head>
       <div>

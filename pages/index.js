@@ -7,18 +7,18 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Aya Li</title>
+        <title>AYA LI</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant"
+          content="AYA LI - Digitial Marketing Consultant"
         ></meta>
       </Head>
       <div className="hero_image">
-        <Image src={portrait} alt="portrait of Aya Li" />
+        <Image src={portrait} alt="portrait of AYA LI" />
       </div>
       <div className="hero">
-        <h1>Aya Li</h1>
+        <h1>AYA LI</h1>
         <h2>
           DIGITAL MARKETING <br />
           CONSULTANT

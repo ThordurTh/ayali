@@ -6,11 +6,11 @@ function packages() {
   return (
     <>
       <Head>
-        <title>Aya Li - Packages</title>
+        <title>AYA LI - Packages</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Packages"
+          content="AYA LI - Digitial Marketing Consultant - Packages"
         ></meta>
       </Head>
       <div>

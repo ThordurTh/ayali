@@ -6,11 +6,11 @@ function services() {
   return (
     <>
       <Head>
-        <title>Aya Li - Services</title>
+        <title>AYA LI - Services</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"
-          content="Aya Li - Digitial Marketing Consultant - Services"
+          content="AYA LI - Digitial Marketing Consultant - Services"
         ></meta>
       </Head>
       <h1>TAILORED SOLUTIONS</h1>
