@@ -8,7 +8,7 @@ export default function Header({ title }) {
       <nav className="header_nav">
         <Link href="/">
           <a>
-            <Image src={logo} alt="logo" width={128} height={128} />
+            <Image src={logo} alt="logo" />
           </a>
         </Link>
         <Link href="/services">SERVICES</Link>
