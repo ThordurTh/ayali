@@ -31,11 +31,11 @@ export default function blog({ articles }) {
         ></meta>
       </Head>
 
-      <ul>
+      <ul className='blog-cards-container'>
         {articles.map((article) => (
           <li key={article.sys.id}>
-            <Link href={"/blog/" + article.fields.slug}>
-              <a>{article.fields.title}</a>
+            <a>{article.fields.title}</a>
+            <Link href={"/blog/" + article.fields.slug}>Read More
             </Link>
           </li>
         ))}

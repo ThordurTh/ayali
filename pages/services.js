@@ -13,11 +13,13 @@ function services() {
           content="AYA LI - Digitial Marketing Consultant - Services"
         ></meta>
       </Head>
+      <section className="services-hero">
       <h1>TAILORED SOLUTIONS</h1>
       <p>
         Scale your eCommerce business by successfully overcoming your marketing
         challenges with a tailored digital marketing strategy.
       </p>
+      </section>
       <section className="strategies">
         <div>
           <h3>DIGITAL MARKETING TACTICS</h3>
@@ -34,9 +36,9 @@ function services() {
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
+            width="36"
+            height="36"
+            fill="var(--teal3)"
             className="bi bi-instagram"
             viewBox="0 0 16 16"
           >
@@ -56,9 +58,9 @@ function services() {
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
+            width="36"
+            height="36"
+            fill="var(--teal3)"
             className="bi bi-instagram"
             viewBox="0 0 16 16"
           >
@@ -78,9 +80,9 @@ function services() {
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
+            width="36"
+            height="36"
+            fill="var(--teal3)"
             className="bi bi-instagram"
             viewBox="0 0 16 16"
           >
