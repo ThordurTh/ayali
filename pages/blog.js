@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 
 let client = require("contentful").createClient({
-  space: "7vhvg9tgo4hz",
-  accessToken: "7cyStGbHO_DXJ1jrFW7ttnBLDYIAb9Y35UxZsWgZTl8",
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
 export async function getStaticProps() {

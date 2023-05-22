@@ -1,0 +1,58 @@
+.index_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+  @media screen and (min-width: 1080px) {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 5%;
+    max-height: 50vh;
+    gap: 5%;
+  }
+  .hero {
+    margin-bottom: 3rem;
+    @media screen and (min-width: 1080px) {
+      text-align: left;
+      margin-bottom: 1.1rem;
+    }
+    h1 {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      font-weight: 200;
+    }
+    .job_title {
+      font-family: "Poppins", sans-serif;
+      font-size: var(--h5);
+      font-weight: 100;
+      font-style: italic;
+      padding: 0 0 2rem;
+      margin: 0;
+      color: #3f3f3f;
+      letter-spacing: 0.155em;
+      line-height: normal;
+      @media screen and (min-width: 1080px) {
+        text-align: left;
+      }
+    }
+    p {
+      font-weight: 200;
+      letter-spacing: 0.155em;
+      color: #3f3f3f;
+      text-align: center;
+      margin-bottom: 2rem;
+      @media screen and (min-width: 1080px) {
+        text-align: left;
+      }
+    }
+    .cta {
+      padding: 1rem 2rem;
+    }
+  }
+  .footer_nav {
+    justify-content: flex-end;
+  }
+}
