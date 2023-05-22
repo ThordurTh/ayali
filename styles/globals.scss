@@ -80,3 +80,20 @@ a {
   text-decoration: none;
   color: var(--black);
 }
+
+.cta {
+  text-align: center;
+  background: var(--teal2);
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 300;
+  line-height: 133.52%;
+  /* or 37px */
+  width: 70%;
+  margin: 0 auto;
+
+  text-align: center;
+  letter-spacing: 0.155em;
+}
