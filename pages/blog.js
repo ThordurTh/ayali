@@ -35,7 +35,7 @@ export default function blog({ articles }) {
         {articles.map((article) => (
           <li key={article.sys.id}>
             <a>{article.fields.title}</a>
-            <Link href={"/blog/" + article.fields.slug}><a className="cta">Read More</a>
+            <Link href={"/blog/" + article.fields.slug}>Read More
             </Link>
           </li>
         ))}

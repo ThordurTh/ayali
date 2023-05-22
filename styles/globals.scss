@@ -93,9 +93,14 @@ a {
   /* or 37px */
   width: 70%;
   margin: 0 auto;
-
   text-align: center;
   letter-spacing: 0.155em;
+  transition: all .5s ease;
+  border: 2px solid var(--teal2)
+}
+.cta:hover{
+  background-color : transparent;
+  color: var(--teal2)!important;
 }
 
 .footer_nav {
