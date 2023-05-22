@@ -1,10 +1,12 @@
 import Image from "next/image";
 import logo from "../assets/logo.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [danish, setDanish] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
   const handleDanish = () => {
     setDanish(true);
   };
@@ -17,9 +19,14 @@ export default function Header() {
     setNavbarOpen((prev) => !prev);
   };
 
-  const closeBurger = () => {
+  const closeBurger = (path) => {
     setNavbarOpen(false);
+    setActiveLink(path);
   };
+
+  useEffect(()=> {
+    setActiveLink(window.location.pathname);
+  },[]);
 
   return (
     <header>
@@ -48,30 +55,30 @@ export default function Header() {
         <div className={`desktop_links ${navbarOpen ? " open" : " "}`}>
           <Link href="/services">
             {danish ? (
-              <a onClick={closeBurger}>SERVICES </a>
+              <a className={activeLink === '/services' ? 'active' : ''} onClick={()=>closeBurger("/services")}>SERVICES </a>
             ) : (
-              <a onClick={closeBurger}>SERVICES</a>
+              <a className={activeLink === '/services' ? 'active' : ''} onClick={()=>closeBurger("/services")}>SERVICES </a>
             )}
           </Link>
           <Link href="/cases">
             {danish ? (
-              <a onClick={closeBurger}>CASES</a>
+              <a className={activeLink === '/cases' ? 'active' : ''} onClick={()=>closeBurger("/cases")}>CASES</a>
             ) : (
-              <a onClick={closeBurger}>CASES</a>
+              <a className={activeLink === '/cases' ? 'active' : ''} onClick={()=>closeBurger("/cases")}>CASES</a>
             )}
           </Link>
           <Link href="/packages">
             {danish ? (
-              <a onClick={closeBurger}>PAKKER</a>
+              <a className={activeLink === '/packages' ? 'active' : ''} onClick={()=>closeBurger("/packages")}>PAKKER</a>
             ) : (
-              <a onClick={closeBurger}>PACKAGES</a>
+              <a className={activeLink === '/packages' ? 'active' : ''} onClick={()=>closeBurger("/packages")}>PACKAGES</a>
             )}
           </Link>
           <Link href="/company">
             {danish ? (
-              <a onClick={closeBurger}>VIRKSOMHED</a>
+              <a className={activeLink === '/company' ? 'active' : ''} onClick={()=>closeBurger("/company")}>VIRKSOMHED</a>
             ) : (
-              <a onClick={closeBurger}>COMPANY</a>
+              <a className={activeLink === '/company' ? 'active' : ''} onClick={()=>closeBurger("/company")}>COMPANY</a>
             )}
           </Link>
           <Link href="/contact">
@@ -88,7 +95,7 @@ export default function Header() {
 
           <div className="nav2">
             <Link href="/blog">
-              <a onClick={closeBurger}>BLOG</a>
+              <a className={activeLink === '/blog' ? 'active' : ''} onClick={()=>closeBurger("/blog")}>BLOG</a>
             </Link>
             <div className="language_toggle">
               <span

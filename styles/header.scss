@@ -75,6 +75,9 @@ header {
         justify-content: space-evenly;
         width: 100%;
         font-size: 18px;
+        a:not(.cta) {
+          border: solid 2px transparent;
+        }
         .cta {
           margin: 0;
           width: auto;
@@ -112,6 +115,11 @@ header {
       transform: translateY(0);
       transition: all 0.5s;
       gap: 2rem;
+    }
+    @media screen and (min-width: 1080px) {
+      .desktop_links a.active{
+      border-bottom: solid 2px var(--teal3);
+    }
     }
   }
   .header_nav.show_menu {
