@@ -13,11 +13,11 @@
   --black: #161616;
   /* font sizes */
   --hero-title: 8rem;
-  --h1: 5.6rem;
-  --h2: 4rem;
-  --h3: 2.8rem;
-  --h4: 2rem;
-  --h5: 1.4rem;
+  --h1: 4.209rem;
+  --h2: 3.157rem;
+  --h3: 2.369rem;
+  --h4: 1.777rem;
+  --h5: 1.333rem;
 }
 
 html {
@@ -49,23 +49,23 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052rem;
+  font-size: var(--h1);
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: var(--h2);
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: var(--h3);
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: var(--h4);
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: var(--h5);
 }
 
 small,
@@ -96,4 +96,20 @@ a {
 
   text-align: center;
   letter-spacing: 0.155em;
+}
+
+.footer_nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  @media screen and (min-width: 1080px) {
+    display: none;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import FooterNav from "@components/FooterNav";
 
 function services() {
+  const currentPage = 2;
   return (
     <>
       <Head>
@@ -89,44 +91,7 @@ function services() {
         </div>
         <Link href="/contact">GET STARTED</Link>
       </section>
-      <nav className="footer_nav">
-        <Link href="/">
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              className="bi bi-chevron-left"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-              />
-            </svg>
-            FRONT
-          </a>
-        </Link>
-        <Link href="/cases">
-          <a>
-            CASES
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              className="bi bi-chevron-right"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-              />
-            </svg>
-          </a>
-        </Link>
-      </nav>
+      <FooterNav currentPage={currentPage}></FooterNav>
     </>
   );
 }
