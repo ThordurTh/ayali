@@ -1,4 +1,7 @@
 import "@styles/globals.scss";
+import "@styles/header.scss";
+import "@styles/index.scss";
+
 import Layout from "../components/Layout";
 
 function Application({ Component, pageProps }) {
