@@ -23,6 +23,9 @@
       font-family: "Poppins", sans-serif;
       margin: 0;
       font-weight: 200;
+      @media screen and (min-width: 1080px) {
+        font-size: var(--hero-title);
+      }
     }
     .job_title {
       font-family: "Poppins", sans-serif;
@@ -36,6 +39,7 @@
       line-height: normal;
       @media screen and (min-width: 1080px) {
         text-align: left;
+        font-size: var(--h2);
       }
     }
     p {
