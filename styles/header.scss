@@ -99,11 +99,10 @@ header {
           display: flex;
           .selectedLang {
             background-color: var(--teal3);
-            color: white;
           }
           .language_btn {
             padding: 0 0.5rem;
-            border-radius: 10px;
+            border-radius: 4px;
             cursor: pointer;
           }
         }

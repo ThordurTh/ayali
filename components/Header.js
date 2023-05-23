@@ -104,7 +104,6 @@ export default function Header() {
               >
                 EN
               </span>
-              <span>/</span>
               <span
                 className={`language_btn ${!danish ? " " : " selectedLang"}`}
                 onClick={handleDanish}
