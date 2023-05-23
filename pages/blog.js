@@ -29,14 +29,14 @@ export default function blog({ articles }) {
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Blog"
         ></meta>
+        <meta name="theme-color" content="#c7f3e9" />
       </Head>
 
-      <ul className='blog-cards-container'>
+      <ul className="blog-cards-container">
         {articles.map((article) => (
           <li key={article.sys.id}>
             <a>{article.fields.title}</a>
-            <Link href={"/blog/" + article.fields.slug}>Read More
-            </Link>
+            <Link href={"/blog/" + article.fields.slug}>Read More</Link>
           </li>
         ))}
       </ul>

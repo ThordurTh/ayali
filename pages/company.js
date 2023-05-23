@@ -16,7 +16,9 @@ function company() {
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Company"
         ></meta>
+        <meta name="theme-color" content="#c7f3e9" />
       </Head>
+
       <div>
         <h1>ABOUT ME</h1>
         <p>Quote from microsoft man</p>

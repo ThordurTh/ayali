@@ -14,7 +14,9 @@ function cases() {
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Cases"
         ></meta>
+        <meta name="theme-color" content="#c7f3e9" />
       </Head>
+
       <div>
         <h1>PREVIOUS CASES</h1>
         <p>

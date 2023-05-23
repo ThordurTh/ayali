@@ -15,7 +15,9 @@ export default function index() {
           name="description"
           content="AYA LI - Digitial Marketing Consultant"
         ></meta>
+        <meta name="theme-color" content="#c7f3e9" />
       </Head>
+
       <div className="hero_image">
         <Image src={portrait} alt="portrait of AYA LI" />
       </div>

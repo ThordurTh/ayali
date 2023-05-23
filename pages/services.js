@@ -14,13 +14,15 @@ function services() {
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Services"
         ></meta>
+        <meta name="theme-color" content="#c7f3e9" />
       </Head>
+
       <section className="services-hero">
-      <h1>TAILORED SOLUTIONS</h1>
-      <p>
-        Scale your eCommerce business by successfully overcoming your marketing
-        challenges with a tailored digital marketing strategy.
-      </p>
+        <h1>TAILORED SOLUTIONS</h1>
+        <p>
+          Scale your eCommerce business by successfully overcoming your
+          marketing challenges with a tailored digital marketing strategy.
+        </p>
       </section>
       <section className="strategies">
         <div>
