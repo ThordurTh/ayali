@@ -31,7 +31,13 @@ function contact() {
               lorem ipsum lorem ipsum
             </p>
           </div>
-          <form name="contact" netlify>
+          <form
+            name="contact"
+            action="contact"
+            method="post"
+            data-netlify="true"
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <div className="input_wrapper">
               <div className="input_field">
                 <input name="firstName" type="text" required />
@@ -61,7 +67,9 @@ function contact() {
                 acknowledged the privacy policy.
               </span>
             </div>
-            <input className="cta submit" type="submit" value="SUBMIT" />
+            <button className="cta submit" type="submit">
+              SUBMIT
+            </button>
           </form>
         </div>
         <div className="contact_image">
