@@ -33,7 +33,7 @@ function contact() {
           </div>
           <form
             name="contact"
-            action="contact"
+            // action="contact"
             method="post"
             data-netlify="true"
           >
