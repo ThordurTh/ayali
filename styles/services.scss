@@ -27,7 +27,6 @@
         > ul{
             padding-bottom: 1.5rem;
             margin-left: 2rem;
-            align-self: center;
         }
         > p{
             max-width: 500px; 
@@ -49,6 +48,14 @@
         > div{
             border-top: none;
             padding: 0 2rem 0 2rem;
+            h3{
+                min-height: 120px;
+                display: flex;
+                align-items: center;
+                align-self: center;
+                
+
+            }
         }
         .sales-marketing{
             border-right: 2px solid var(--teal3);

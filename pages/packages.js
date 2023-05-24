@@ -23,7 +23,7 @@ function packages() {
         </p>
       </section>
       <section className="packages">
-        <div>
+        <div className="border-top">
           <h3>BOOK A FREE CALL</h3>
           <p>A quick discovery call</p>
           <span>0DKK</span>
