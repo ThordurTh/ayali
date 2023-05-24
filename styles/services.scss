@@ -9,7 +9,7 @@
         max-width: 500px;
     }
     :nth-child(2){
-        max-width: 500px;
+        max-width: 600px;
     }
 }
 .strategies{
@@ -31,4 +31,27 @@
             max-width: 500px; 
         }
     }
+    .cta{
+        padding: 1rem 2rem;
+        max-width: 400px;
+        font-size: 18px;
+    }
 }
+@media screen and (min-width: 1080px) {
+    .strategies{
+        grid-template-columns: 1fr 1fr 1fr;
+        .cta{
+            grid-column: 2/3;
+            margin-top: 2rem;
+        }
+        > div{
+            border-top: none;
+            padding: 0 2rem 0 2rem;
+        }
+        .sales-marketing{
+            border-right: 2px solid var(--teal3);
+            border-left: 2px solid var(--teal3);
+            padding-left: 4rem!important;
+        }
+    }
+ }
