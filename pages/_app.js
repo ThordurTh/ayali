@@ -5,6 +5,7 @@ import "@styles/header.scss";
 import "@styles/footer.scss";
 import "@styles/index.scss";
 import "@styles/contact.scss";
+import "@styles/packages.scss"
 
 import Layout from "../components/Layout";
 

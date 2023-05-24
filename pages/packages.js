@@ -16,57 +16,59 @@ function packages() {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
-
-      <div>
+  <section className="packages-hero">
         <h1>PACKAGES</h1>
         <p>
-          Pricing of packages blabla lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum
+        Elevate your online presence with our tailored digital marketing packages. Achieve your business goals with comprehensive solutions and measurable results.
         </p>
-      </div>
-
-      <section>
+      </section>
+      <section className="packages">
         <div>
-          <h2>DISCOVERY CALL</h2>
-          <p>A quick marketing audit</p>
+          <h3>BOOK A FREE CALL</h3>
+          <p>A quick discovery call</p>
           <span>0DKK</span>
           <ul>
-            <li>30 minute video call via zoom</li>
+            <li>30 minute video call</li>
             <li>Free digital marketing audit</li>
             <li>
-              Learn if you are making any crucial marketing mistakes right now
+            Answering all your questions
             </li>
-            <li>Answering your questions</li>
+            <li>Offering you insights regarding your business</li>
           </ul>
-          <Link href="../contact">START NOW</Link>
+          <div className="packages-button-container">
+          <Link href="../contact"><a className="cta">START NOW</a></Link>
+          </div>
+        </div>
+        <div className="middle-package">
+          <h3>SHORT-TERM PROJECT</h3>
+          <p>Consulting services</p>
+          <span>700DKK / h</span>
+          <ul>
+            <li>Strategic planning</li>
+            <li>Campaign setup and management</li>
+            <li>Content creation</li>
+            <li>Performance tracking and optimization</li>
+            <li>Reporting and analysis</li>
+          </ul>
+          <div className="packages-button-container">
+          <Link href="../contact"><a className="cta">START NOW</a></Link>
+          </div>
         </div>
         <div>
-          <h2>SHORT-TERM PROJECT</h2>
-          <p>Consulting services</p>
-          <span>500DKK / h</span>
+          <h3>LONG-TERM PROJECT</h3>
+          <p>Enhanced Consulting services</p>
+          <span>Starting 2000DKK / month</span>
           <ul>
-            <li>Digital marketing audits</li>
-            <li>Marketing consulting services</li>
-            <li>Marketing trainings for teams</li>
-            <li>Regular marketing efficiency checks</li>
-            <li>Other short-term projects</li>
+            <li>Comprehensive strategy development</li>
+            <li>Ongoing campaign management and optimization</li>
+            <li>Continuous content creation and optimization</li>
+            <li>Advanced performance tracking and analysis</li>
+            <li>Regular reporting and progress updates</li>
+            <li>Advertising campaigns</li>
           </ul>
-          <Link href="../contact">START NOW</Link>
-        </div>
-        <div>
-          <h2>LONG-TERM PROJECT</h2>
-          <p>Consulting services</p>
-          <span>From 2300DKK / month</span>
-          <ul>
-            <li>Meta (Facebook) advertising</li>
-            <li>Google Ads (Search) advertising</li>
-            <li>Google Display Network (GDN) advertising</li>
-            <li>Youtube advertising</li>
-            <li>Snapchat advertising</li>
-            <li>Tik Tok advertising</li>
-            <li>Marketing reports & recommendations</li>
-          </ul>
-          <Link href="../contact">START NOW</Link>
+          <div className="packages-button-container">
+          <Link href="../contact"><a className="cta">START NOW</a></Link>
+          </div>
         </div>
       </section>
 
