@@ -5,6 +5,9 @@ footer {
     position: absolute;
     bottom: 0;
   }
+  @media screen and (max-height: 1080px) {
+    position: static;
+  }
   ul {
     display: flex;
     flex-direction: column;
