@@ -31,15 +31,17 @@ export default function blog({ articles }) {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
-
+    <div className="blog-page-wrapper">
+    <h1>Blog</h1>
       <ul className="blog-cards-container">
         {articles.map((article) => (
           <li key={article.sys.id}>
             <a>{article.fields.title}</a>
-            <Link href={"/blog/" + article.fields.slug}>Read More</Link>
+            <Link href={"/blog/" + article.fields.slug}>Read More -&gt;</Link>
           </li>
         ))}
       </ul>
+      </div>
     </>
   );
 }
