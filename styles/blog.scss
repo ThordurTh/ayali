@@ -6,7 +6,7 @@
     margin: auto;
     padding: 1rem;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     h1{
         text-align: center;
 
@@ -53,6 +53,7 @@
 
     @media screen and (min-width: 1080px) {
         .blog-page-wrapper{
+            margin-top: 2rem;
             .blog-cards-container{
                 justify-content: flex-start;
             }
