@@ -19,28 +19,54 @@ function company() {
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
 
-      <div>
+      <div className="company-hero">
         <h1>ABOUT ME</h1>
-        <p>Quote from microsoft man</p>
-        <p>About me bla bla</p>
+        <p>The internet is becoming the town square for the global village of tomorrow</p>
+          <p>Bill Gates</p>
+        <p>About me bla bla Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus.</p>
       </div>
-      <section className="timeline">
-        <div>
-          cirlce <br /> lorem blabla lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum
-        </div>
-        <div className="line"></div>
-        <div>
-          cirlce <br /> lorem blabla lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum
-        </div>
-        <div className="line"></div>
-        <div>
-          cirlce <br /> lorem blabla lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum
-        </div>
-        <Image src={portrait} alt="image of aya" />
-      </section>
+      <section className="block-content t-block-teal l-block-spacing">
+					<div className="l-contained">
+						<ul className="timeline-list">
+							<li>
+                  <div className="content-company">
+								<h3>The beginning</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+								</p>
+                </div>
+							</li>
+							<li>
+                  <div className="content-company">
+								<h3>First Client</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+								</p>
+                </div>
+							</li>
+							<li>
+                  <div className="content-company">
+								<h3>Current status</h3>
+								<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+								</p>
+                </div>
+							</li>
+              <li>
+                  <div className="content-company">
+								<h3>The future</h3>
+								<p>
+								Planning to expand, going to be very pog 
+								</p>
+                </div>
+							</li>
+						</ul>
+						
+								
+						
+					</div>
+
+				</section>
       <FooterNav currentPage={currentPage}></FooterNav>
     </>
   );
