@@ -40,7 +40,7 @@ function company() {
 							</li>
 							<li>
                   <div className="content-company">
-								<h3>First Client - Januart 2022</h3>
+								<h3>First Client - January 2022</h3>
 								<p>
                 My inaugural client, a prominent marketing agency, offered me a freelance position, igniting my journey. Working with eight e-commerce web shops, I gained hands-on experience in paid social media advertising, expanding later into Google ads and e-mail marketing.
 								</p>
