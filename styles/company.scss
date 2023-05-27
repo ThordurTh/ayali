@@ -32,11 +32,6 @@
       text-transform:uppercase;
       text-align:center;
   }
-  .content-company h3 {
-    color:#fff;
-  }
-  
-  
 
   
   .l-block-spacing {
@@ -70,7 +65,7 @@
    
     &:before {
           content: "";
-       border-left: 5px solid #CCC;
+       border-left: 5px solid var(--teal4);
        left: -0.25em;
        top: 2em;
        height: 100%;
@@ -91,23 +86,13 @@
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: none repeat scroll 0% 0% #DDD;
-          border: 5px solid #DDD;
+          background: none repeat scroll 0% 0% var(--teal4);
+          border: 5px solid var(--teal4);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
       animation:revealScaleUp 0.75s 2.82s ease both 1;
       }
   }
-  
 
-  .t-block-teal h2 {
-      color:#683535;
-  }
-  .t-block-teal h3 {
-      color:#034944;
-  }
-  .t-block-teal p {
-      color:#034944;
-  }
   //list animation 
   //scale in the circle, follwoed by the list item
   //the border must also animate in.
@@ -127,8 +112,8 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background: none repeat scroll 0% 0% #02aa9d;
-      border: 6px solid #160101;
+      background: none repeat scroll 0% 0% var(--teal2);
+      border: 6px solid var(--teal4);
     animation:revealScaleUp 0.75s 0s ease both 1;
   }
   .timeline-list {
@@ -138,9 +123,6 @@
   .timeline-list li .content-company {
     animation:revealFromLeft 0.5s 0s ease both 1;
   }
-  
-  
-  
   
   .timeline-list li:nth-child(1):before {
     animation-delay:0.85s;
@@ -212,3 +194,22 @@
       
     }
   }
+.company-page-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1080px) {
+  .company-page-wrapper{
+    justify-content: space-evenly;
+    flex-direction: row;
+    .l-block-spacing {
+      padding:6em 0 4em 0;
+  }
+  }
+}
+
+.company-image{
+  max-width: 400px;
+  max-height: 400px;
+}
