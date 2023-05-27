@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image"
+import portrait from "../assets/portrait.png";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -36,8 +38,12 @@ export default function blog({ articles }) {
       <ul className="blog-cards-container">
         {articles.map((article) => (
           <li key={article.sys.id}>
-            <a>{article.fields.title}</a>
-            <Link href={"/blog/" + article.fields.slug}>Read More -&gt;</Link>
+            <Link href={"/blog/" + article.fields.slug}>
+            <a className="blog-link">
+              <h5>{article.fields.title}</h5>
+              <Image src={portrait} alt="portrait of AYA LI" />Read More -&gt;
+            </a>
+            </Link>
           </li>
         ))}
       </ul>

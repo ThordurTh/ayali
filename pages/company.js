@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import portrait from "../assets/portrait.png";
 import Head from "next/head";

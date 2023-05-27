@@ -34,9 +34,11 @@ export async function getStaticProps({ params }) {
 export default function Article({ article }) {
   console.log(article);
   return (
-    <div>
-      <h1>{article.fields.title}</h1>
-      <div>{documentToReactComponents(article.fields.content)}</div>
+    <div className="blog-posts-page-container">
+      <div className="blog-posts-page-hero-container">
+      <h2 >{article.fields.title}</h2>
+      </div>
+      <div className="blog-posts-page-content">{documentToReactComponents(article.fields.content)}</div>
     </div>
   );
 }
