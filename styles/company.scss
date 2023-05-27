@@ -10,7 +10,7 @@
         max-width: 500px;
     }
     :nth-child(2){
-        max-width: 650px;
+        max-width: 400px;
         font-style: italic;
         margin-bottom: 0;
     }
@@ -18,8 +18,12 @@
       font-weight: 700;
     }
     :nth-child(4){
-        max-width: 650px;
+        margin-bottom: 0rem;
+        max-width: 600px;
     }
+    :nth-child(5){
+      max-width: 500px;
+  }
 }
 
   .block-content p {
@@ -206,7 +210,7 @@
 
 @media screen and (min-width: 1080px) {
   .company-page-wrapper{
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
     .l-block-spacing {
       padding:6em 0 4em 0;

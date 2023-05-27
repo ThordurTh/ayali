@@ -19,7 +19,7 @@ export default function index() {
       </Head>
 
       <div className="hero_image">
-        <Image src={portrait} alt="portrait of AYA LI" />
+        <Image priority src={portrait} alt="portrait of AYA LI" />
       </div>
       <div className="hero">
         <h1>AYA LI</h1>

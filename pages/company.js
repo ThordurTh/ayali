@@ -20,11 +20,11 @@ function company() {
       <div className="company-page-wrapper">
       <div className="company-hero">
         <h1>ABOUT ME</h1>
-        <p>The internet is becoming the town square for the global village of tomorrow</p>
+        <p>"The internet is becoming the town square for the global village of tomorrow"</p>
           <p>Bill Gates</p>
-        <p>About me bla bla Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus.</p>
+        <p>I specialize in scaling eCommerce businesses with a holistic, and data-driven approach. Through years of experience in digital marketing and with a background in business administration, -psychology, and sales, I help businesses stand out from the market by focusing on strategy and branding. </p><p>The result? A strong digital presence and long-term increased sales.</p>
         <div className="company-image">
-        <Image src={portrait} alt="portrait of AYA LI" />
+        <Image priority src={portrait} alt="portrait of AYA LI" />
       </div>
       </div>
       <section className="block-content t-block-teal l-block-spacing">
@@ -32,25 +32,25 @@ function company() {
 						<ul className="timeline-list">
 							<li>
                   <div className="content-company">
-								<h3>The beginning</h3>
+								<h3>The beginning - December 2021</h3>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+                Studying Business Psychology ignited my passion for marketing. I ventured into the world of digital marketing, launching my own consultancy to help businesses grow. With innovative strategies and a strong foundation, I embarked on an exciting journey at the beginning of my career.
 								</p>
                 </div>
 							</li>
 							<li>
                   <div className="content-company">
-								<h3>First Client</h3>
+								<h3>First Client - Januart 2022</h3>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+                My inaugural client, a prominent marketing agency, offered me a freelance position, igniting my journey. Working with eight e-commerce web shops, I gained hands-on experience in paid social media advertising, expanding later into Google ads and e-mail marketing.
 								</p>
                 </div>
 							</li>
 							<li>
                   <div className="content-company">
-								<h3>Current status</h3>
+								<h3>Current standing</h3>
 								<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus. 
+								Presently, my portfolio has expanded to encompass three additional clients, in addition to the marketing agency. Moreover, I have cultivated partnerships with an impressive roster of 12-13 e-commerce businesses, boosting their digital marketing efforts across various platforms, encompassing Google ads, e-mail marketing, and paid advertisements in social media realms. 
 								</p>
                 </div>
 							</li>
@@ -58,7 +58,7 @@ function company() {
                   <div className="content-company">
 								<h3>The future</h3>
 								<p>
-								Planning to expand, going to be very pog 
+								For the future, I envision expanding my company by hiring more digital consultants and onboarding new clients. This growth-oriented approach aims to further enhance our presence in the digital marketing industry.
 								</p>
                 </div>
 							</li>
