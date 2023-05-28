@@ -63,7 +63,7 @@ function ContactForm({ predefinedSubject }) {
       name="contact"
       method="post"
       data-netlify="true"
-      // data-netlify-success="/success?name={inputValues.firstName});"
+      data-netlify-success="/success?name={inputValues.firstName});"
       onSubmit={handleFormSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
