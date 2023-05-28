@@ -3,10 +3,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 
+function success() {
 const router = useRouter();
 const { name } = router.query;
 
-function success() {
     return (
         <>
           <Head>
