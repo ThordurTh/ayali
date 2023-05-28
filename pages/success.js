@@ -19,10 +19,10 @@ const { name } = router.query;
             <meta name="theme-color" content="#c7f3e9" />
           </Head>
     <section className="services-hero success-message">
-            <h1>Thank you {name} </h1>
+            <h1>Thank you {name}!</h1>
         <p>
-          Scale your eCommerce business by successfully overcoming your
-          marketing challenges with a tailored digital marketing strategy.
+          Your business's success story starts here!
+          I will contact you as soon as I am available. I am looking forward a successful collaboration with you!
         </p>
         <div>
             <Link href="../">
