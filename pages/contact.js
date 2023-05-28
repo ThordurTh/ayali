@@ -1,115 +1,28 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import portrait from "../assets/portrait.png";
+import contactPhoto from "../assets/contact_photo.jpg";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import ContactForm from "@components/ContactForm";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 function contact() {
   const currentPage = 6;
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  // const [nameValid, setNameValid] = useState(false);
-  // const [emailValid, setEmailValid] = useState(false);
-  const [nameFocus, setNameFocus] = useState(false);
-  const [emailFocus, setEmailFocus] = useState(false);
+  const router = useRouter();
+  const { value } = router.query;
 
-  // CHANGE
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  let predefinedSubject = "";
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  // BLUR
-  const handleNameBlur = () => {
-    setNameFocus(name !== "");
-  };
-
-  // const handleEmailBlur = () => {
-  //   setEmailFocus(email !== "");
-  // };
-
-  // // FOCUS
-  // const handleNameFocus = () => {
-  //   setNameFocus(true);
-  // };
-  // const handleEmailFocus = () => {
-  //   setEmailFocus(true);
-  // };
-
-  // SUBMIT
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   setEmailFocus(email.includes("@"));
-
-  //   if (nameValid && emailValid) {
-  //     // Submit the form or perform other actions
-  //     console.log("Form submitted");
-  //   } else {
-  //     // Display error message or perform other actions
-  //     console.log("Please fill in the required fields");
-  //   }
-  // };
-
-  // const [inputValues, setInputValues] = useState({
-  //   firstName: "",
-  //   lastName: "",
-  //   company: "",
-  //   email: "",
-  //   message: "",
-  // });
-  // const [invalidInputs, setInvalidInputs] = useState([]);
-  // const [isValid, setIsValid] = useState(false);
-  // const [isFocused, setIsFocused] = useState(false);
-
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setInputValues((prevInputValues) => ({
-  //     ...prevInputValues,
-  //     [name]: value,
-  //   }));
-  //   setIsValid(event.target.value.length > 0);
-  // };
-
-  // const handleFormSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   const invalidInputs = Object.entries(inputValues)
-  //     .filter(([_, value]) => value === "")
-  //     .map(([name, _]) => name);
-
-  //   if (invalidInputs.length > 0) {
-  //     setInvalidInputs(invalidInputs);
-  //     return; // Stop form submission
-  //   }
-
-  //   // Reset invalidInputs state if all inputs are valid
-  //   setInvalidInputs([]);
-
-  //   // Proceed with form submission
-  //   // ...
-  // };
-
-  // const handleFocus = (inputId) => {
-  //   setIsFocused(inputId);
-  // };
-
-  // const handleBlur = (event) => {
-  //   setIsFocused(false);
-  // };
-  // const [errorMessage, setErrorMessage] = useState("");
-
-  // const handleInvalid = (e) => {
-  //   e.preventDefault();
-  //   setErrorMessage("Please enter a value. wow");
-  // };
+  if (value === "package1") {
+    predefinedSubject = "Free 30 minute call";
+  } else if (value === "package2") {
+    predefinedSubject = "Short-term Project";
+  } else if (value === "package3") {
+    predefinedSubject = "Long-term Project";
+  }
 
   return (
     <>
@@ -127,152 +40,27 @@ function contact() {
           <div className="contact_about">
             <h1>Contact</h1>
             <p>
-            Maximize your online potential and achieve business success with expert guidance.
-            As a dedicated digital marketing consultant, I am here to empower you with tailored strategies. 
+              Maximize your online potential and achieve business success with
+              expert guidance. As a dedicated digital marketing consultant, I am
+              here to empower you with tailored strategies.
             </p>
-            <p>Take advantage of the quick discovery call, where I will assess your unique needs and provide tailored solutions. Simply fill out the form below to get started on your digital marketing journey. I look forward to collaborating with you and helping your business thrive in the digital landscape!
+            <p>
+              Take advantage of the quick discovery call, where I will assess
+              your unique needs and provide tailored solutions. Simply fill out
+              the form below to get started on your digital marketing journey. I
+              look forward to collaborating with you and helping your business
+              thrive in the digital landscape!
             </p>
           </div>
-
-          <ContactForm />
-
-          {/* <form
-            name="contact"
-            // action="contact"
-            method="post"
-            data-netlify="true"
-            onSubmit={handleFormSubmit}
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="input_wrapper">
-              <div className="input_field">
-                <input
-                  name="firstName"
-                  type="text"
-                  className={
-                    invalidInputs.includes("firstName") ? "invalid-input" : ""
-                  }
-                  // className={`input-field ${isFocused ? "focused" : ""} ${
-                  //   invalidInputs.includes("firstName") ? "invalid-input" : ""
-                  // }`}
-                  value={inputValues.firstName}
-                  onFocus={() => handleFocus("firstName")}
-                  onBlur={handleBlur}
-                  onChange={handleInputChange}
-                />
-                <label
-                  htmlFor="firstName"
-                  // className={isFocused ? "focused" : ""}
-                  className={`${isFocused === "firstName" ? "focused" : ""} ${
-                    isValid ? "focused" : ""
-                  }`}
-                >
-                  First Name
-                </label>
-              </div>
-              <div className="input_field">
-                <input
-                  name="lastName"
-                  type="text"
-                  className={
-                    invalidInputs.includes("lastName") ? "invalid-input" : ""
-                  }
-                  value={inputValues.lastName}
-                  onChange={handleInputChange}
-                  onFocus={() => handleFocus("lastName")}
-                />
-                <label
-                  htmlFor="lastName"
-                  className={`${isFocused === "lastName" ? "focused" : ""} ${
-                    isValid ? "focused" : ""
-                  }`}
-                >
-                  Last Name
-                </label>
-              </div>
-              <div className="input_field">
-                <input
-                  name="company"
-                  type="text"
-                  className={
-                    invalidInputs.includes("company") ? "invalid-input" : ""
-                  }
-                  value={inputValues.company}
-                  onChange={handleInputChange}
-                  onFocus={() => handleFocus("company")}
-                  onBlur={handleBlur}
-                />
-                <label
-                  htmlFor="company"
-                  className={`${isFocused === "company" ? "focused" : ""} ${
-                    isValid ? "focused" : ""
-                  }`}
-                >
-                  Company Name
-                </label>
-              </div>
-              <div className="input_field">
-                <input
-                  name="email"
-                  type="email"
-                  className={
-                    invalidInputs.includes("email") ? "invalid-input" : ""
-                  }
-                  value={inputValues.email}
-                  onChange={handleInputChange}
-                  onFocus={() => handleFocus("email")}
-                  onBlur={handleBlur}
-                />
-                <label
-                  htmlFor="email"
-                  className={`${isFocused === "email" ? "focused" : ""} ${
-                    isValid ? "focused" : ""
-                  }`}
-                >
-                  Email
-                </label>
-              </div>
-              <div className="text_field">
-                <textarea
-                  name="message"
-                  className={
-                    invalidInputs.includes("message") ? "invalid-input" : ""
-                  }
-                  value={inputValues.message}
-                  onChange={handleInputChange}
-                  onFocus={() => handleFocus("message")}
-                  onBlur={handleBlur}
-                ></textarea>
-                <label
-                  htmlFor="message"
-                  className={`${isFocused === "message" ? "focused" : ""} ${
-                    isValid ? "focused" : ""
-                  }`}
-                >
-                  Description
-                </label>
-              </div>
-            </div>
-            <div className="acknowledge">
-              <input type="checkbox" />
-              <span>
-                By sending this form, I confirm that I have read and
-                acknowledged the privacy policy.
-              </span>
-            </div>
-            {invalidInputs.length > 0 && (
-              <p className="error">
-                Please enter a value for the following input(s):{" "}
-                {invalidInputs.join(", ")}
-              </p>
-            )}
-            <button className="cta submit" type="submit">
-              SUBMIT
-            </button>
-            </form> */}
+          <ContactForm predefinedSubject={predefinedSubject} />
         </div>
         <div className="contact_image">
-          <Image src={portrait} alt="portrait of AYA LI" />
+          <Image
+            src={contactPhoto}
+            alt="portrait of AYA LI"
+            width={600}
+            height={780}
+          />
         </div>
       </div>
       <FooterNav currentPage={currentPage}></FooterNav>

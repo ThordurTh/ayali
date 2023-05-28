@@ -16,10 +16,12 @@ function packages() {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
-  <section className="packages-hero">
+      <section className="packages-hero">
         <h1>PACKAGES</h1>
         <p>
-        Elevate your online presence with our tailored digital marketing packages. Achieve your business goals with comprehensive solutions and measurable results.
+          Elevate your online presence with our tailored digital marketing
+          packages. Achieve your business goals with comprehensive solutions and
+          measurable results.
         </p>
       </section>
       <section className="packages">
@@ -30,13 +32,13 @@ function packages() {
           <ul>
             <li>30 minute video call</li>
             <li>Free digital marketing audit</li>
-            <li>
-            Answering all your questions
-            </li>
+            <li>Answering all your questions</li>
             <li>Offering you insights regarding your business</li>
           </ul>
           <div className="packages-button-container">
-          <Link href="../contact"><a className="cta">START NOW</a></Link>
+            <Link href="../contact?value=package1">
+              <a className="cta">START NOW</a>
+            </Link>
           </div>
         </div>
         <div className="middle-package">
@@ -51,7 +53,9 @@ function packages() {
             <li>Reporting and analysis</li>
           </ul>
           <div className="packages-button-container">
-          <Link href="../contact"><a className="cta">START NOW</a></Link>
+            <Link href="../contact?value=package2">
+              <a className="cta">START NOW</a>
+            </Link>
           </div>
         </div>
         <div>
@@ -67,7 +71,9 @@ function packages() {
             <li>Advertising campaigns</li>
           </ul>
           <div className="packages-button-container">
-          <Link href="../contact"><a className="cta">START NOW</a></Link>
+            <Link href="../contact?value=package3">
+              <a className="cta">START NOW</a>
+            </Link>
           </div>
         </div>
       </section>

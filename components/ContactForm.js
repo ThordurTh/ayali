@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function ContactForm() {
+function ContactForm({ predefinedSubject }) {
   const [inputValues, setInputValues] = useState({
     firstName: "",
     lastName: "",
     company: "",
     email: "",
-    subject: "predefinedSubject" || "",
+    subject: predefinedSubject || "",
     description: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,18 +31,24 @@ function ContactForm() {
 
     const test = Object.entries(inputValues)
       .filter(([_, value]) => value === "")
-      .map(([name, _]) =>
-        name === "firstName"
-          ? "First Name"
-          : name === "lastName"
-          ? "Last Name"
-          : name.charAt(0).toUpperCase() + name.slice(1)
-      );
+      .map(([name, _]) => name);
+
+    const modifiedStrings = test.map((str) => {
+      if (str === "firstName") {
+        return "First Name";
+      }
+      if (str === "lastName") {
+        return "Last Name";
+      }
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    });
 
     setInvalidInputs(test);
 
     if (test.length > 0) {
-      setErrorMessage(`Please enter a value for: ${test.join(", ")}`);
+      setErrorMessage(
+        `Please enter a value for: ${modifiedStrings.join(", ")}`
+      );
     } else if (!checkbox) {
       setErrorMessage("Please check the checkbox");
     }
@@ -59,6 +65,7 @@ function ContactForm() {
       data-netlify="true"
       onSubmit={handleFormSubmit}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div className="input_wrapper">
         {[
           { name: "firstName", label: "First Name" },

@@ -146,6 +146,7 @@
         flex-direction: row;
         gap: 1rem;
         margin: 1rem 0;
+        align-items: center;
         input {
           min-width: 32px;
           @media screen and (min-width: 1080px) {
@@ -172,23 +173,25 @@
 
       .error {
         color: rgb(232, 89, 89);
+        position: absolute;
       }
     }
   }
   .contact_image {
     align-self: center;
     margin: 1rem 0;
-    transform: scaleX(-1);
+    // max-width: 100%;
+    // width: 600px;
     @media screen and (min-width: 1600px) {
       align-self: flex-end;
       margin: 0 auto;
-      transform: scaleX(-1);
       span {
         margin: 0 auto;
       }
       img {
         width: 625px;
         margin: 0 auto;
+        border-radius: 10px;
       }
     }
   }
