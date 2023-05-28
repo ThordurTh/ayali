@@ -25,7 +25,6 @@ function contact() {
             <h1>Contact</h1>
             <p>
             Maximize your online potential and achieve business success with expert guidance.
-            To stand out from the competition and drive long-term sales, businesses need to focus on effective strategy and branding as the core guiding principles in digital marketing.
             As a dedicated digital marketing consultant, I am here to empower you with tailored strategies. 
             </p>
             <p>Take advantage of the quick discovery call, where I will assess your unique needs and provide tailored solutions. Simply fill out the form below to get started on your digital marketing journey. I look forward to collaborating with you and helping your business thrive in the digital landscape!
