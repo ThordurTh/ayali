@@ -7,6 +7,7 @@ import "@styles/index.scss";
 import "@styles/contact.scss";
 import "@styles/packages.scss"
 import "@styles/company.scss"
+import "@styles/cases.scss"
 
 import Layout from "../components/Layout";
 
