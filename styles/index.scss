@@ -13,6 +13,9 @@
     // max-height: 50vh;
     gap: 5%;
   }
+  @media screen and (min-height: 901px) {
+    padding-bottom: 10rem;
+  }
   .hero {
     margin-bottom: 3rem;
     @media screen and (min-width: 1080px) {

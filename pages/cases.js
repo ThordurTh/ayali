@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
-import Tabs from "@components/Tabs"
-import chart from "../assets/chart-up.png"
-import money from "../assets/money.png"
-import brands from "../assets/brands.png"
+import Tabs from "@components/Tabs";
+import chart from "../assets/chart-up.png";
+import money from "../assets/money.png";
+import brands from "../assets/brands.png";
 import Image from "next/image";
 
 function cases() {
@@ -22,27 +22,31 @@ function cases() {
       </Head>
       <div className="previous-cases-hero">
         <div className="previous-cases-text">
-        <h1>PREVIOUS CASES</h1>
-        <p>
-          Text about previous cases lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum
-        </p>
+          <h1>PREVIOUS CASES</h1>
+          <p>
+            With a holistic creative approach in scaling businesses and a
+            background in psychology and sales, here is how I leveraged my
+            skills and knowledge to help businesses grow.
+          </p>
         </div>
         <div className="previous-cases-graphics">
-          <div><Image src={money} width={48} height={48} alt="money icon" />
-          <p>Avg. revenue +164% </p>
+          <div>
+            <Image src={money} width={48} height={48} alt="money icon" />
+            <p>Avg. revenue +164% </p>
           </div>
           <div>
-          <p>Avg. <abbr title="Return on Ad Spend">ROAS</abbr> 3.98</p>
+            <p>
+              Avg. <abbr title="Return on Ad Spend">ROAS</abbr> 3.98
+            </p>
             <Image src={chart} width={48} height={48} alt="chart icon" />
-            </div>
+          </div>
           <div>
             <Image src={brands} width={48} height={48} alt="brands icon" />
             <p>+7 eCommerce brands</p>
-            </div>
+          </div>
         </div>
       </div>
-      <Tabs/>
+      <Tabs />
       <FooterNav currentPage={currentPage}></FooterNav>
     </>
   );
