@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -134,14 +134,6 @@ export default function Header() {
           </Link>
 
           <div className="nav2">
-          <Link href="/blog">
-              <a
-                className={activeLink === "/blog" ? "active" : ""}
-                onClick={() => closeBurger("/blog")}
-              >
-                WORKSHOP
-              </a>
-            </Link>
             <Link href="/blog">
               <a
                 className={activeLink === "/blog" ? "active" : ""}
@@ -150,7 +142,6 @@ export default function Header() {
                 BLOG
               </a>
             </Link>
-            
             <div className="language_toggle">
               <span
                 className={`language_btn ${danish ? " " : " selectedLang"}`}

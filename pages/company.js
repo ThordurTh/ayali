@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import portrait from "../assets/portrait.png";
+import portrait from "../assets/portrait.webp";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 
