@@ -21,7 +21,6 @@ export async function getStaticProps() {
 }
 
 export default function blog({ articles }) {
-  console.log(articles);
   return (
     <>
       <Head>
@@ -41,7 +40,7 @@ export default function blog({ articles }) {
             <Link href={"/blog/" + article.fields.slug}>
             <a className="blog-link">
               <h5>{article.fields.title}</h5>
-              <Image src={portrait} alt="portrait of AYA LI" />Read More -&gt;
+              <Image src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description}  width={1920} height={1080}/>Read More -&gt;
             </a>
             </Link>
           </li>
