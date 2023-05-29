@@ -33,7 +33,7 @@ function cases() {
           <p>Avg. revenue +164% </p>
           </div>
           <div>
-          <p>Avg. ROAS 3.98</p>
+          <p>Avg. <abbr title="Return on Ad Spend">ROAS</abbr> 3.98</p>
             <Image src={chart} width={48} height={48} alt="chart icon" />
             </div>
           <div>

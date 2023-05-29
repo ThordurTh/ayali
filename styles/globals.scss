@@ -148,4 +148,9 @@ a {
 }
 .success-message{
   min-height: 700px;
-} 
+}
+
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--teal1);
+}
