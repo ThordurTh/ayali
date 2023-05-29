@@ -74,7 +74,7 @@
   .back-arrow {
     position: fixed;
     top: 10rem;
-    left: 3%;
+    left: 2rem;
     border-radius: 100%;
     padding: 1rem;
     background-color: var(--teal2);
@@ -85,8 +85,9 @@
     z-index: 2;
     opacity: 0.6;
     transition: opacity 0.5s;
-    @media screen and (min-width:1080px){
-      left: 10%;
+    @media screen and (min-width:1640px){
+      
+      left: calc(50% - 700px);
     }
   }
   .back-arrow:hover {
