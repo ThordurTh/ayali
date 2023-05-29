@@ -161,10 +161,10 @@
         font: inherit;
         color: currentColor;
         width: 1.5rem;
-        height: 1.5rem;
         border: 0.2em solid var(--teal4);
         border-radius: 5px;
         background-color: var(--teal4);
+        aspect-ratio: 1/1;
       }
 
       input[type="checkbox"]:checked {

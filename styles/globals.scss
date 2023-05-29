@@ -32,6 +32,11 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--black);
+  position: relative;
+  min-height: 100vh;
+  main {
+    // min-height: 881px;
+  }
 }
 
 p {
@@ -143,9 +148,9 @@ a {
     align-items: center;
   }
 }
-.success{
+.success {
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
-.success-message{
+.success-message {
   min-height: 700px;
-} 
+}

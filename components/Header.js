@@ -24,9 +24,9 @@ export default function Header() {
     setActiveLink(path);
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     setActiveLink(window.location.pathname);
-  },[]);
+  }, []);
 
   return (
     <header>
@@ -55,30 +55,70 @@ export default function Header() {
         <div className={`desktop_links ${navbarOpen ? " open" : " "}`}>
           <Link href="/services">
             {danish ? (
-              <a className={activeLink === '/services' ? 'active' : ''} onClick={()=>closeBurger("/services")}>SERVICES </a>
+              <a
+                className={activeLink === "/services" ? "active" : ""}
+                onClick={() => closeBurger("/services")}
+              >
+                SERVICES{" "}
+              </a>
             ) : (
-              <a className={activeLink === '/services' ? 'active' : ''} onClick={()=>closeBurger("/services")}>SERVICES </a>
+              <a
+                className={activeLink === "/services" ? "active" : ""}
+                onClick={() => closeBurger("/services")}
+              >
+                SERVICES{" "}
+              </a>
             )}
           </Link>
           <Link href="/cases">
             {danish ? (
-              <a className={activeLink === '/cases' ? 'active' : ''} onClick={()=>closeBurger("/cases")}>CASES</a>
+              <a
+                className={activeLink === "/cases" ? "active" : ""}
+                onClick={() => closeBurger("/cases")}
+              >
+                CASES
+              </a>
             ) : (
-              <a className={activeLink === '/cases' ? 'active' : ''} onClick={()=>closeBurger("/cases")}>CASES</a>
+              <a
+                className={activeLink === "/cases" ? "active" : ""}
+                onClick={() => closeBurger("/cases")}
+              >
+                CASES
+              </a>
             )}
           </Link>
           <Link href="/packages">
             {danish ? (
-              <a className={activeLink === '/packages' ? 'active' : ''} onClick={()=>closeBurger("/packages")}>PAKKER</a>
+              <a
+                className={activeLink === "/packages" ? "active" : ""}
+                onClick={() => closeBurger("/packages")}
+              >
+                PAKKER
+              </a>
             ) : (
-              <a className={activeLink === '/packages' ? 'active' : ''} onClick={()=>closeBurger("/packages")}>PACKAGES</a>
+              <a
+                className={activeLink === "/packages" ? "active" : ""}
+                onClick={() => closeBurger("/packages")}
+              >
+                PACKAGES
+              </a>
             )}
           </Link>
           <Link href="/company">
             {danish ? (
-              <a className={activeLink === '/company' ? 'active' : ''} onClick={()=>closeBurger("/company")}>VIRKSOMHED</a>
+              <a
+                className={activeLink === "/company" ? "active" : ""}
+                onClick={() => closeBurger("/company")}
+              >
+                VIRKSOMHED
+              </a>
             ) : (
-              <a className={activeLink === '/company' ? 'active' : ''} onClick={()=>closeBurger("/company")}>COMPANY</a>
+              <a
+                className={activeLink === "/company" ? "active" : ""}
+                onClick={() => closeBurger("/company")}
+              >
+                COMPANY
+              </a>
             )}
           </Link>
           <Link href="/contact">
@@ -95,7 +135,12 @@ export default function Header() {
 
           <div className="nav2">
             <Link href="/blog">
-              <a className={activeLink === '/blog' ? 'active' : ''} onClick={()=>closeBurger("/blog")}>BLOG</a>
+              <a
+                className={activeLink === "/blog" ? "active" : ""}
+                onClick={() => closeBurger("/blog")}
+              >
+                BLOG
+              </a>
             </Link>
             <div className="language_toggle">
               <span
