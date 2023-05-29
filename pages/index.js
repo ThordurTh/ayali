@@ -27,7 +27,7 @@ export default function index() {
           DIGITAL MARKETING <br />
           CONSULTANT
         </p>
-        <p>Start your journey of exponential cheese here.</p>
+        <p>Start your journey of exponential growth here!</p>
         <Link href="/contact">
           <a className="cta">Get started</a>
         </Link>
