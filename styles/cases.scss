@@ -120,10 +120,12 @@
   }
   .active-content {
     display: flex;
+    justify-content: space-between;
   }
 
   .individual-content {
     margin-top: 0;
+    width: 33%;
   }
 }
 
