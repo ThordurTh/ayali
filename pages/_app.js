@@ -33,7 +33,7 @@ function Application({ Component, pageProps }) {
 
   return (
     <Layout>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait" initial={true}>
         <motion.div
           key={router.route} // Ensure key changes on route change to trigger animation
           initial={{ opacity: 0 }}
