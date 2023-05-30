@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import portrait from "../assets/portrait.png";
 import FooterNav from "@components/FooterNav";
+import {motion} from 'framer-motion'
 
 export default function index() {
   const currentPage = 1;
@@ -19,7 +20,21 @@ export default function index() {
       </Head>
 
       <div className="hero_image">
+        <motion.div initial="hidden" animate="visible" variants={{
+          hidden: {
+            scale: .8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: .4
+            }
+          }
+        }}>
         <Image priority src={portrait} alt="portrait of AYA LI" />
+        </motion.div>
       </div>
       <div className="hero">
         <h1>AYA LI</h1>

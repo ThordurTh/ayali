@@ -10,6 +10,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.4",
     "contentful": "^10.2.0",
+    "framer-motion": "^10.12.16",
     "next": "^12.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
