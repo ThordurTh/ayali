@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image"
-import portrait from "../assets/portrait.png";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -32,21 +30,42 @@ export default function blog({ articles }) {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
-    <div className="blog-page-wrapper">
-    <h1>Blog</h1>
-      <ul className="blog-cards-container">
-        {articles.map((article) => (
-          <li key={article.sys.id}>
-            <Link href={"/blog/" + article.fields.slug}>
-            <a className="blog-link">
-              <h5>{article.fields.title}</h5>
-              <Image src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description}  width={1920} height={1080}/>Read More -&gt;
+      <div className="blog-page-wrapper">
+        <h1>Blog</h1>
+        <div className="blog-cards-container">
+          {articles.map((article) => (
+            <Link href={"/blog/" + article.fields.slug} key={article.sys.id}>
+              <a href="#" className="button">
+            <div  className="card">
+              <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
+              <div className="card-content">
+                <h4>
+                {article.fields.title}
+                </h4>
+
+                  
+                  <span>
+                  Read more -&gt;
+                  </span>
+                
+              </div>
+            </div>
             </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+                </Link>
+          ))}
+        </div>
       </div>
     </>
   );
 }
+          // <li key={article.sys.id}>
+          //   <Link href={"/blog/" + article.fields.slug}>
+          //   <a className="blog-link">
+          //     <h5>{article.fields.title}</h5>
+          //     <div className="blog-post-img-container">
+          //     <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
+          //     </div>
+          //     <span className="read-more">READ MORE -&gt;</span>
+          //   </a>
+          //   </Link>
+          // </li>

@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import contactPhoto from "../assets/contact_photo.jpg";
+import contactPhoto from "../assets/contact_photo.webp";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import ContactForm from "@components/ContactForm";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 function contact() {

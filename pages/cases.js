@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import Tabs from "@components/Tabs";
-import chart from "../assets/chart-up.png";
-import money from "../assets/money.png";
-import brands from "../assets/brands.png";
+import chart from "../assets/chart-up.webp";
+import money from "../assets/money.webp";
+import brands from "../assets/brands.webp";
 import Image from "next/image";
 
 function cases() {

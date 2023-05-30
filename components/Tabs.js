@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import brand1 from "../assets/BRAND1.png";
-import brand2 from "../assets/BRAND2.png";
-import brand3 from "../assets/BRAND3.png";
+import brand1 from "../assets/BRAND1.webp";
+import brand2 from "../assets/BRAND2.webp";
+import brand3 from "../assets/BRAND3.webp";
 import Image from "next/image";
 
 function Tabs() {

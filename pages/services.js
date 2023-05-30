@@ -2,15 +2,15 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import instagram from "../assets/instagram.png"
-import facebook from "../assets/facebook.png"
-import email from "../assets/email-icon.png"
-import gmail from "../assets/gmail.png"
-import strategy from "../assets/strategy.png"
-import target from "../assets/target.png"
-import chart from "../assets/chart-up.png"
-import speakerphone from "../assets/speakerphone.png"
-import piechart from "../assets/pie-chart.png"
+import instagram from "../assets/instagram.webp"
+import facebook from "../assets/facebook.webp"
+import email from "../assets/email-icon.webp"
+import gmail from "../assets/gmail.webp"
+import strategy from "../assets/strategy.webp"
+import target from "../assets/target.webp"
+import chart from "../assets/chart-up.webp"
+import speakerphone from "../assets/speakerphone.webp"
+import piechart from "../assets/pie-chart.webp"
 import FooterNav from "@components/FooterNav";
 
 function services() {
