@@ -1,74 +1,72 @@
-.services-hero{
+.services-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  margin-top: 2rem;
+  :nth-child(1) {
+    max-width: 500px;
+  }
+  :nth-child(2) {
+    max-width: 600px;
+  }
+}
+.strategies {
+  padding: 2rem;
+  display: grid;
+  gap: 2.5rem;
+  > div {
+    border-top: 2px solid var(--teal3);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem ;
-    padding: 2rem 1rem 2rem 1rem;
-    margin-top: 2rem;
-    :nth-child(1){
-        max-width: 500px;
+    > h3 {
+      padding-bottom: 1rem;
     }
-    :nth-child(2){
-        max-width: 600px;
+    > ul {
+      padding-bottom: 1.5rem;
+      margin-left: 2rem;
     }
-}
-.strategies{
-    padding: 2rem;
-    display: grid;
-    gap: 2.5rem;
-    > div{
-        border-top: 2px solid var(--teal3);
-        display: flex;
-        flex-direction: column;
-        > h3{
-            padding-bottom: 1rem;
-        }
-        > ul{
-            padding-bottom: 1.5rem;
-            margin-left: 2rem;
-        }
-        > p{
-            max-width: 500px; 
-        }
+    > p {
+      max-width: 500px;
     }
-    .cta{
-        padding: 1rem 2rem;
-        max-width: 400px;
-        font-size: 18px;
-    }
+  }
+  .cta {
+    padding: 1rem 2rem;
+    max-width: 400px;
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 1080px) {
-    .strategies{
-        grid-template-columns: 1fr 1fr 1fr;
-        .cta{
-            grid-column: 2/3;
-            margin-top: 2rem;
-        }
-        > div{
-            border-top: none;
-            padding: 0 2rem 0 2rem;
-            h3{
-                min-height: 120px;
-                display: flex;
-                align-items: center;
-                align-self: center;
-                
-
-            }
-        }
-        .sales-marketing{
-            border-right: 2px solid var(--teal3);
-            border-left: 2px solid var(--teal3);
-            padding-left: 4rem!important;
-        }
+  .strategies {
+    grid-template-columns: 1fr 1fr 1fr;
+    .motion-cta {
+      grid-column: 2/3;
+      margin-top: 2rem;
     }
- }
+    > div {
+      border-top: none;
+      padding: 0 2rem 0 2rem;
+      h3 {
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        align-self: center;
+      }
+    }
+    .sales-marketing {
+      border-right: 2px solid var(--teal3);
+      border-left: 2px solid var(--teal3);
+      padding-left: 4rem !important;
+    }
+  }
+}
 
- .icons-container{
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-around;
-    min-height: 48px;
-    margin-top: auto;
- }
+.icons-container {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around;
+  min-height: 48px;
+  margin-top: auto;
+}

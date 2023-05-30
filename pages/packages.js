@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
+import { motion } from "framer-motion";
 
 function packages() {
   const currentPage = 4;
@@ -25,7 +26,12 @@ function packages() {
         </p>
       </section>
       <section className="packages">
-        <div className="border-top">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+          className="border-top"
+        >
           <h3>BOOK A FREE CALL</h3>
           <p>A quick discovery call</p>
           <span>0DKK</span>
@@ -40,8 +46,13 @@ function packages() {
               <a className="cta">START NOW</a>
             </Link>
           </div>
-        </div>
-        <div className="middle-package">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+          className="middle-package"
+        >
           <h3>SHORT-TERM PROJECT</h3>
           <p>Consulting services</p>
           <span>700DKK / h</span>
@@ -57,8 +68,12 @@ function packages() {
               <a className="cta">START NOW</a>
             </Link>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
+        >
           <h3>LONG-TERM PROJECT</h3>
           <p>Enhanced Consulting services</p>
           <span>Starting 2000DKK / month</span>
@@ -75,7 +90,7 @@ function packages() {
               <a className="cta">START NOW</a>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <FooterNav currentPage={currentPage}></FooterNav>

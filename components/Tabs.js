@@ -131,7 +131,7 @@ function Tabs() {
                 </div>
 
                 <div className="individual-content">
-                  <h4>Challange</h4>
+                  <h4>Challenge</h4>
                   <p>{tab.p2}</p>
                 </div>
                 <div className="individual-content">

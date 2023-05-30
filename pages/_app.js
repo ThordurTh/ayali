@@ -5,31 +5,51 @@ import "@styles/header.scss";
 import "@styles/footer.scss";
 import "@styles/index.scss";
 import "@styles/contact.scss";
-import "@styles/packages.scss"
-import "@styles/company.scss"
-import "@styles/cases.scss"
-import {motion} from "framer-motion"
+import "@styles/packages.scss";
+import "@styles/company.scss";
+import "@styles/cases.scss";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import Layout from "../components/Layout";
 
 function Application({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // Scroll to the top of the page on route change
+      window.scrollTo(0, 0);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+
   return (
     <Layout>
-      <motion.div initial="hidden" animate="visible" variants={{
-      hidden: {
-        scale: .8,
-        opacity: 0,
-      },
-      visible: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-          delay: .4
-        }
-      }
-    }}>
-      <Component {...pageProps} />
-      </motion.div>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={router.route} // Ensure key changes on route change to trigger animation
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Component {...pageProps} key={router.asPath} />
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
     </Layout>
   );
 }

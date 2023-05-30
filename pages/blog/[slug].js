@@ -2,6 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -35,10 +36,9 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Article({ article }) {
-
   return (
     <>
-    <Head>
+      <Head>
         <title>AYA LI - Blog - {article.fields.title}</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
@@ -47,23 +47,59 @@ export default function Article({ article }) {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
-    <div className="blog-posts-page-container">
-      <Link href="/blog" >
-        <a className="back-arrow" aria-label="Arrow back to blog page">
-        <svg width="32" height="32" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M69 37H5" stroke="white" strokeWidth="9.93054" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M37 69L5 37L37 5" stroke="white" strokeWidth="9.93054" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-</a>
+      <div className="blog-posts-page-container">
+        <Link href="/blog">
+          <a className="back-arrow" aria-label="Arrow back to blog page">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 74 74"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M69 37H5"
+                stroke="white"
+                strokeWidth="9.93054"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M37 69L5 37L37 5"
+                stroke="white"
+                strokeWidth="9.93054"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </Link>
-      <div className="blog-posts-page-hero-container">
-        <div className="blog-post-img-container">
-        <Image src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} layout="fill" />
-        </div>
-      <h1>{article.fields.title}</h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="blog-posts-page-hero-container"
+        >
+          <div className="blog-post-img-container">
+            <Image
+              src={`https:${article.fields.image.fields.file.url}`}
+              alt={article.fields.image.fields.description}
+              layout="fill"
+            />
+          </div>
+
+          <h1>{article.fields.title}</h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: "10%" }}
+          animate={{ opacity: 1, y: "0" }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+        >
+          <div className="blog-posts-page-content">
+            {documentToReactComponents(article.fields.content)}
+          </div>
+        </motion.div>
       </div>
-      <div className="blog-posts-page-content">{documentToReactComponents(article.fields.content)}</div>
-    </div>
     </>
   );
 }

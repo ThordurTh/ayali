@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -33,39 +34,47 @@ export default function blog({ articles }) {
       <div className="blog-page-wrapper">
         <h1>Blog</h1>
         <div className="blog-cards-container">
-          {articles.map((article) => (
-            <Link href={"/blog/" + article.fields.slug} key={article.sys.id}>
-              <a href="#" className="button">
-            <div  className="card">
-              <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
-              <div className="card-content">
-                <h4>
-                {article.fields.title}
-                </h4>
+          {articles.map((article, index) => (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.4,
+                ease: "easeOut",
+              }}
+              key={article.sys.id}
+            >
+              <Link href={"/blog/" + article.fields.slug}>
+                <a href="#" className="button">
+                  <div className="card">
+                    <img
+                      src={`https:${article.fields.image.fields.file.url}`}
+                      alt={article.fields.image.fields.description}
+                    />
+                    <div className="card-content">
+                      <h4>{article.fields.title}</h4>
 
-                  
-                  <span>
-                  Read more -&gt;
-                  </span>
-                
-              </div>
-            </div>
-            </a>
-                </Link>
+                      <span>Read more -&gt;</span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
     </>
   );
 }
-          // <li key={article.sys.id}>
-          //   <Link href={"/blog/" + article.fields.slug}>
-          //   <a className="blog-link">
-          //     <h5>{article.fields.title}</h5>
-          //     <div className="blog-post-img-container">
-          //     <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
-          //     </div>
-          //     <span className="read-more">READ MORE -&gt;</span>
-          //   </a>
-          //   </Link>
-          // </li>
+// <li key={article.sys.id}>
+//   <Link href={"/blog/" + article.fields.slug}>
+//   <a className="blog-link">
+//     <h5>{article.fields.title}</h5>
+//     <div className="blog-post-img-container">
+//     <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
+//     </div>
+//     <span className="read-more">READ MORE -&gt;</span>
+//   </a>
+//   </Link>
+// </li>
