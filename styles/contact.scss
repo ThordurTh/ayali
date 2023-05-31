@@ -7,6 +7,7 @@
     flex-direction: row;
     margin: 5% 5% 0;
     gap: 1rem;
+    padding-bottom: 6rem;
   }
   .form_wrapper {
     display: flex;
@@ -112,6 +113,14 @@
           background-color: var(--teal6);
           padding: 0 8px;
         }
+        .invalid_textarea {
+          color: red;
+          top: -15.4rem!important;
+          left: 10px;
+          font-size: 0.8rem;
+          background-color: var(--teal6);
+          padding: 0 8px;
+        }
         input:focus ~ label,
         input:valid ~ label {
           top: -104px;
@@ -140,8 +149,14 @@
           background-color: var(--teal6);
           padding: 0 8px;
         }
+        
+      }
+      .asterisk {
+        grid-column: 1/3;
+        font-size: var(--small);
       }
       .acknowledge {
+        font-size: var(--small);
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -160,7 +175,8 @@
         appearance: none;
         font: inherit;
         color: currentColor;
-        width: 1.5rem;
+        min-width: 32px;
+        min-height: 32px;
         border: 0.2em solid var(--teal4);
         border-radius: 5px;
         background-color: var(--teal4);
@@ -179,7 +195,7 @@
   }
   .contact_image {
     align-self: center;
-    margin: 1rem 0;
+    margin: 6rem 0 0;
     // max-width: 100%;
     // width: 600px;
     @media screen and (min-width: 1600px) {

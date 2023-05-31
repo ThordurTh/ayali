@@ -7,7 +7,7 @@ function ContactForm({ predefinedSubject }) {
     company: "",
     email: "",
     subject: predefinedSubject || "",
-    description: "",
+    message: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [invalidInputs, setInvalidInputs] = useState([]);
@@ -47,7 +47,7 @@ function ContactForm({ predefinedSubject }) {
 
     if (test.length > 0) {
       setErrorMessage(
-        `Please enter a value for: ${modifiedStrings.join(", ")}`
+        `Please fill in the following: ${modifiedStrings.join(", ")}`
       );
     } else if (!checkbox) {
       setErrorMessage("Please check the checkbox");
@@ -83,7 +83,7 @@ function ContactForm({ predefinedSubject }) {
               required
             />
             <label className={invalidInputs.includes(name) ? "invalid" : ""}>
-              {label}
+              {label}*
             </label>
           </div>
         ))}
@@ -97,23 +97,24 @@ function ContactForm({ predefinedSubject }) {
             required
           />
           <label className={invalidInputs.includes("subject") ? "invalid" : ""}>
-            Subject
+            Subject*
           </label>
         </div>
         <div className="text_field">
           <textarea
-            name="description"
+            name="message"
             onChange={handleInputChange}
             onInvalid={handleInvalid}
             required
           ></textarea>
           <label
-            htmlFor="description"
-            className={invalidInputs.includes("description") ? "invalid" : ""}
+            htmlFor="message"
+            className={invalidInputs.includes("message") ? "invalid_textarea" : ""}
           >
-            Description
+            Message*
           </label>
         </div>
+        <span className="asterisk">* means that the field is required</span>
       </div>
       <div className="acknowledge">
         <input
@@ -130,6 +131,7 @@ function ContactForm({ predefinedSubject }) {
       <button className="cta submit" type="submit">
         SUBMIT
       </button>
+      
       {errorMessage && <p className="error">{errorMessage}</p>}
     </form>
   );

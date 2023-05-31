@@ -16,7 +16,12 @@
 .strategies {
   padding: 2rem;
   display: grid;
-  gap: 2.5rem;
+  @media screen and (max-width:1080px) {
+      gap: 2.5rem;
+  }
+  .cta {
+    margin-top: 2rem;
+  }
   > div {
     border-top: 2px solid var(--teal3);
     display: flex;
@@ -44,6 +49,9 @@
     .motion-cta {
       grid-column: 2/3;
       margin-top: 2rem;
+      @media screen and (min-height:1080px) {
+        margin-bottom: 2rem;
+      }
     }
     > div {
       border-top: none;
@@ -58,7 +66,6 @@
     .sales-marketing {
       border-right: 2px solid var(--teal3);
       border-left: 2px solid var(--teal3);
-      padding-left: 4rem !important;
     }
   }
 }

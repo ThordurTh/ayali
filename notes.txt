@@ -1,12 +1,16 @@
 Explain technical terms in CASES - DONE
 Date on blog posts - DONE
-Smaller image index 
-Activate to edit the task name
-styling icons services
-styling borders services
-styling borders services
-styling “short term project” border right
-checkbox mobile
-contact image margin-top mobile
-services cta button margin-top mobile
+Smaller image index - DONE - TO BE TESTED
+Footer fix - DONE
+styling icons services - DONE
+styling borders services - DONE
+styling borders packages - DONE
+styling “short term project” border right - DONE
+checkbox mobile - DONE - TO BE TESTED
+contact image margin-top mobile - Done
+services cta button margin-top mobile - DONE
+
 mobile header smaller height
+Scrap Bill Gates quote
+Change name of form from description to message
+Please fill in instead of please enter a value

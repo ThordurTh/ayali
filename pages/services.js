@@ -41,7 +41,6 @@ function services() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         >
-          <div>
             <h3>DIGITAL MARKETING TACTICS</h3>
             <ul>
               <li>Social Media Marketing: Facebook and Instagram </li>
@@ -70,14 +69,14 @@ function services() {
               <Image src={email} width={61.08} height={48} alt="mail icon" />
               <Image src={gmail} width={48.77} height={48} alt="google icon" />
             </div>
-          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+          className="sales-marketing"
         >
-          <div className="sales-marketing">
+
             <h3>SALES & MARKETING STRATEGY</h3>
             <ul>
               <li>Align sales and marketing strategy</li>
@@ -97,14 +96,14 @@ function services() {
               />
               <Image src={target} width={48} height={48} alt="target icon" />
             </div>
-          </div>
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
         >
-          <div>
+
             <h3>OVERALL BUSINESS OBJECTIVES</h3>
             <ul>
               <li>Increase sales</li>
@@ -130,7 +129,6 @@ function services() {
                 alt="speakerphone icon"
               />
             </div>
-          </div>
         </motion.div>
         <motion.div
           className="motion-cta"

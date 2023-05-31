@@ -21,11 +21,6 @@ function company() {
         <div className="company-hero">
           <h1>ABOUT ME</h1>
           <p>
-            "The internet is becoming the town square for the global village of
-            tomorrow"
-          </p>
-          <p>Bill Gates</p>
-          <p>
             I specialize in scaling eCommerce businesses with a holistic, and
             data-driven approach. Through years of experience in digital
             marketing and with a background in business administration,
