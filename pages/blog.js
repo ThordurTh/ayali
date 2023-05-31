@@ -67,14 +67,3 @@ export default function blog({ articles }) {
     </>
   );
 }
-// <li key={article.sys.id}>
-//   <Link href={"/blog/" + article.fields.slug}>
-//   <a className="blog-link">
-//     <h5>{article.fields.title}</h5>
-//     <div className="blog-post-img-container">
-//     <img src={`https:${article.fields.image.fields.file.url}`} alt={article.fields.image.fields.description} />
-//     </div>
-//     <span className="read-more">READ MORE -&gt;</span>
-//   </a>
-//   </Link>
-// </li>

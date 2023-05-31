@@ -1,0 +1,12 @@
+Explain technical terms in CASES - DONE
+Date on blog posts - DONE
+Smaller image index 
+Activate to edit the task name
+styling icons services
+styling borders services
+styling borders services
+styling “short term project” border right
+checkbox mobile
+contact image margin-top mobile
+services cta button margin-top mobile
+mobile header smaller height

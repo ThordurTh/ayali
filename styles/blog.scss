@@ -59,11 +59,6 @@
   }
 }
 
-
-
-
-
-
 //Individual Blog Posts styling
 
 .blog-posts-page-container {
@@ -122,8 +117,7 @@ top: 0;
 left: 0;
       }
     }
-    h1 {
-      font-weight: 300;
+    .blog-heading {
       padding-left: 1rem;
       margin-top: 0rem;
       margin-bottom: 0;
@@ -131,6 +125,10 @@ left: 0;
       position: absolute;
       width: 100%;
       background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, var(--teal6) 100%);
+      h1 {
+        font-weight: 300;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -157,13 +155,7 @@ left: 0;
 }
 
 
-
-// TEST STYLING
-
-// Colors
 $color-primary-white: rgb(240, 240, 240);
-
-
 
 .card {
   width: 20rem;
@@ -195,7 +187,6 @@ $color-primary-white: rgb(240, 240, 240);
 
   h4 {
     position: absolute;
-    // inset: auto auto 30px 0;
     padding-left: 1rem;
     padding-bottom: 2rem;
     padding-top: 6rem;
@@ -205,9 +196,9 @@ $color-primary-white: rgb(240, 240, 240);
     font-weight: normal;
     text-transform: uppercase;
     background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, var(--teal1) 100%);
-bottom: 0;
-width: 100%;
-text-align: left;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
   }
   
   p, a {
@@ -216,10 +207,6 @@ text-align: left;
     max-width: 80%;
     transition: opacity .3s ease-out;
   }
-  
-  // p {
-  //   inset: auto auto 80px 30px;
-  // }
   
   span {
     position: absolute;
@@ -231,7 +218,6 @@ text-align: left;
   }
   
   &:hover h4 {
-    // inset: auto auto;
     padding-bottom: 4rem;
     transition: padding-bottom .3s ease-out;
   }
@@ -247,4 +233,10 @@ text-align: left;
     filter: grayscale(0%);
   }
 
+}
+
+.italic{
+  font-style: italic;
+  color: var(--grey);
+  font-size: 16px;
 }

@@ -23,7 +23,7 @@ function Tabs() {
     {
       id: 1,
       imgSrc: brand1,
-      p1: "Brand 1, a prominent consumer goods company, required assistance in optimizing their search engine optimization and marketing strategies. The project aimed to enhance Brand 1's online visibility, drive organic traffic, and improve their overall marketing performance. Through strategic SEO tactics and targeted marketing initiatives, the objective was to elevate Brand 1's online presence and expand their market reach.",
+      p1: "Brand 1, a prominent consumer goods company, required assistance in optimizing their search engine optimization and marketing strategies. The project aimed to enhance Brand 1's online visibility, drive organic traffic, and improve their overall marketing performance. Through strategic SEO (Search Engine Optimization) tactics and targeted marketing initiatives, the objective was to elevate Brand 1's online presence and expand their market reach.",
       p2: "The main challenge faced in this project was the highly competitive nature of the consumer goods industry. Brand 1 needed to overcome the fierce competition and stand out in a saturated market. The task was to develop innovative and effective SEO and marketing strategies that would not only drive organic traffic but also differentiate Brand 1 from its competitors.",
       p3: "The project involved analyzing Brand 1's SEO and marketing efforts, conducting market research, and studying competitors. A tailored strategy was developed, focusing on keyword optimization, content creation, and targeted campaigns. Continuous monitoring and optimization ensured effectiveness throughout the project.",
     },

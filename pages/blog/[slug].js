@@ -36,6 +36,16 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Article({ article }) {
+
+  function formatDate(timestamp) {
+    const date = new Date(timestamp);
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `Aya Li, ${day}/${month}/${year}`;
+  }
+  const formattedDate = formatDate(article.sys.createdAt);
+
   return (
     <>
       <Head>
@@ -55,8 +65,7 @@ export default function Article({ article }) {
               height="32"
               viewBox="0 0 74 74"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M69 37H5"
                 stroke="white"
@@ -87,8 +96,10 @@ export default function Article({ article }) {
               layout="fill"
             />
           </div>
-
+    <div className="blog-heading">
           <h1>{article.fields.title}</h1>
+          <span className="italic">{formattedDate}</span>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: "10%" }}
@@ -96,6 +107,7 @@ export default function Article({ article }) {
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
         >
           <div className="blog-posts-page-content">
+            
             {documentToReactComponents(article.fields.content)}
           </div>
         </motion.div>
