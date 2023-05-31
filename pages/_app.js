@@ -12,10 +12,12 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 import Layout from "../components/Layout";
 
 function Application({ Component, pageProps }) {
+  const [activeLink, setActiveLink] = useState("");
   const router = useRouter();
 
   useEffect(() => {
@@ -32,7 +34,7 @@ function Application({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout activeLink={activeLink} setActiveLink={setActiveLink}>
       <AnimatePresence mode="wait" initial={true}>
         <motion.div
           key={router.route} // Ensure key changes on route change to trigger animation
@@ -46,7 +48,7 @@ function Application({ Component, pageProps }) {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Component {...pageProps} key={router.asPath} />
+            <Component setActiveLink={setActiveLink} {...pageProps} key={router.asPath} />
           </motion.div>
         </motion.div>
       </AnimatePresence>

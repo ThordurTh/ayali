@@ -4,8 +4,11 @@ import portrait from "../assets/portrait.webp";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 
-function company() {
+function company({setActiveLink}) {
   const currentPage = 5;
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
   return (
     <>
       <Head>
@@ -90,7 +93,7 @@ function company() {
           </div>
         </section>
       </div>
-      <FooterNav currentPage={currentPage}></FooterNav>
+      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
     </>
   );
 }

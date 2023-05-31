@@ -13,9 +13,13 @@ import speakerphone from "../assets/speakerphone.webp";
 import piechart from "../assets/pie-chart.webp";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-function services() {
+function services({setActiveLink}) {
   const currentPage = 2;
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
   return (
     <>
       <Head>
@@ -136,12 +140,12 @@ function services() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.6, ease: "easeOut" }}
         >
-          <Link href="/contact">
-            <a className="cta">Get Started</a>
+          <Link href="/packages">
+            <a onClick={() => activeLink("/packages")} className="cta">See Packages</a>
           </Link>
         </motion.div>
       </section>
-      <FooterNav currentPage={currentPage}></FooterNav>
+      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
     </>
   );
 }

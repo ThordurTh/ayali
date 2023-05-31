@@ -104,13 +104,13 @@ a {
   color: var(--black);
 }
 
-.cta {
+.cta, .cta2 {
   text-transform: uppercase;
   text-align: center;
-  background: var(--teal1);
+
   border-radius: 5px;
   padding: 0.5rem 0;
-  color: white !important;
+
   text-decoration: none;
   font-weight: 300;
   line-height: 133.52%;
@@ -123,9 +123,23 @@ a {
   border: 2px solid var(--teal1);
   cursor: pointer;
 }
+.cta {
+  color: var(--teal6) !important;
+  background: var(--teal1);
+}
+.cta2 {
+  background: var(--teal6);
+  border: 2px solid var(--teal3);
+}
+
 .cta:hover {
   background-color: transparent;
   color: var(--teal1) !important;
+}
+.cta2:hover {
+  background: var(--teal3);
+  // border-color: var(--teal3);
+  color: var(--teal6);
 }
 .submit {
   width: 100%;

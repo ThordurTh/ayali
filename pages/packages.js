@@ -3,9 +3,14 @@ import Link from "next/link";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-function packages() {
+function packages({setActiveLink}) {
   const currentPage = 4;
+
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
   return (
     <>
       <Head>
@@ -43,7 +48,7 @@ function packages() {
           </ul>
           <div className="packages-button-container">
             <Link href="../contact?value=package1">
-              <a className="cta">START NOW</a>
+              <a onClick={() => activeLink()} className="cta">START NOW</a>
             </Link>
           </div>
         </motion.div>
@@ -65,7 +70,7 @@ function packages() {
           </ul>
           <div className="packages-button-container">
             <Link href="../contact?value=package2">
-              <a className="cta">START NOW</a>
+              <a onClick={() => activeLink()} className="cta">START NOW</a>
             </Link>
           </div>
         </motion.div>
@@ -87,13 +92,13 @@ function packages() {
           </ul>
           <div className="packages-button-container">
             <Link href="../contact?value=package3">
-              <a className="cta">START NOW</a>
+              <a onClick={() => activeLink()} className="cta">START NOW</a>
             </Link>
           </div>
         </motion.div>
       </section>
-
-      <FooterNav currentPage={currentPage}></FooterNav>
+      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
+      
     </>
   );
 }

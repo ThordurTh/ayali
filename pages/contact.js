@@ -6,8 +6,11 @@ import FooterNav from "@components/FooterNav";
 import ContactForm from "@components/ContactForm";
 import { useRouter } from "next/router";
 
-function contact() {
+function contact({setActiveLink}) {
   const currentPage = 6;
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
 
   const router = useRouter();
   const { value } = router.query;
@@ -61,7 +64,7 @@ function contact() {
           />
         </div>
       </div>
-      <FooterNav currentPage={currentPage}></FooterNav>
+      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
     </>
   );
 }

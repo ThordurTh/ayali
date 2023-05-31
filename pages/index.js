@@ -5,8 +5,11 @@ import portrait from "../assets/portrait.webp";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
 
-export default function index() {
+export default function index({setActiveLink}) {
   const currentPage = 1;
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
   return (
     <>
       <div className="index_wrapper">
@@ -43,17 +46,21 @@ export default function index() {
             <p>Start your journey of exponential growth here!</p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: "50%"}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
+            className="index_ctas"
           >
             <Link href="/contact">
-              <a className="cta">Get started</a>
+              <a onClick={() => activeLink()} className="cta">Get started</a>
+            </Link>
+            <Link href="/services">
+              <a onClick={() => activeLink("/services")} className="cta2">Learn more</a>
             </Link>
           </motion.div>
         </div>
 
-        <FooterNav currentPage={currentPage}></FooterNav>
+        <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
       </div>
     </>
   );

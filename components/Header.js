@@ -3,9 +3,9 @@ import logo from "../assets/logo.webp";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({activeLink, setActiveLink}) {
   const [danish, setDanish] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
+  // const [activeLink, setActiveLink] = useState("");
 
   const handleDanish = () => {
     setDanish(true);
@@ -38,9 +38,9 @@ export default function Header() {
                 className="logo"
                 src={logo}
                 alt="logo"
-                width={96}
-                height={87}
-              />
+                // width={96}
+                // height={87}
+                layout="fill"              />
             </a>
           </Link>
           <div

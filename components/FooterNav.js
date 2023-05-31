@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-const FooterNav = ({ currentPage }) => {
+const FooterNav = ({ currentPage, setActiveLink }) => {
+  const activeLink = (path) => {
+    setActiveLink(path);
+  };
+
   const pageNames = [
     "front",
     "services",
@@ -19,7 +23,9 @@ const FooterNav = ({ currentPage }) => {
         <Link
           href={currentPage === 2 ? "/" : `/${pageNames[previousPage - 1]}`}
         >
-          <a>
+          <a
+           onClick={() => activeLink(`/${pageNames[previousPage-1]}`)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -39,7 +45,7 @@ const FooterNav = ({ currentPage }) => {
       )}
       {nextPage && (
         <Link href={pageNames[nextPage - 1]}>
-          <a>
+          <a onClick={() => activeLink(`/${pageNames[nextPage-1]}`)}>
             {pageNames[nextPage - 1]}
             <svg
               xmlns="http://www.w3.org/2000/svg"
