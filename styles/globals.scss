@@ -105,7 +105,7 @@ a {
   position: relative;
 }
 
-a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, .header_nav a, footer ul a, .footer_nav a):after {
+a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, footer ul a, .footer_nav a):after {
     content: "";
     position: absolute;
     width: 100%;
@@ -117,7 +117,7 @@ a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a,
     transition: transform 0.5s ease-in-out;
     transform-origin: left;
 }
-a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, .header_nav a, footer ul a, .footer_nav a):hover:after{
+a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, footer ul a, .footer_nav a):hover:after{
   transform: scaleX(1);
   transform-origin: left;
 }
