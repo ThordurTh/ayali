@@ -105,24 +105,43 @@ a {
   position: relative;
 }
 
-a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, footer ul a, .footer_nav a):after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: var(--teal3);
-    bottom: -2px;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: left;
+a:not(
+    .cta,
+    .cta2,
+    .logo_link,
+    .back-arrow,
+    .button,
+    .blog-posts-page-content a,
+    footer ul a,
+    .footer_nav a
+  ):after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--teal3);
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
 }
-a:not(.cta, .cta2, .logo_link, .back-arrow, .button, .blog-posts-page-content a, footer ul a, .footer_nav a):hover:after{
+a:not(
+    .cta,
+    .cta2,
+    .logo_link,
+    .back-arrow,
+    .button,
+    .blog-posts-page-content a,
+    footer ul a,
+    .footer_nav a
+  ):hover:after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-.cta, .cta2 {
+.cta,
+.cta2 {
   text-transform: uppercase;
   text-align: center;
 
