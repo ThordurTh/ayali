@@ -5,8 +5,10 @@ import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import ContactForm from "@components/ContactForm";
 import { useRouter } from "next/router";
+import en from "../locales/en";
+import da from "../locales/da";
 
-function contact({setActiveLink}) {
+function contact({ setActiveLink, lang }) {
   const currentPage = 6;
   const activeLink = (path) => {
     setActiveLink(path);
@@ -39,21 +41,11 @@ function contact({setActiveLink}) {
       <div className="contact_wrapper">
         <div className="form_wrapper">
           <div className="contact_about">
-            <h1>Contact</h1>
-            <p>
-              Maximize your online potential and achieve business success with
-              expert guidance. As a dedicated digital marketing consultant, I am
-              here to empower you with tailored strategies.
-            </p>
-            <p>
-              Take advantage of the quick discovery call, where I will assess
-              your unique needs and provide tailored solutions. Simply fill out
-              the form below to get started on your digital marketing journey. I
-              look forward to collaborating with you and helping your business
-              thrive in the digital landscape!
-            </p>
+            <h1>{lang.contact.heading}</h1>
+            <p>{lang.contact.p1}</p>
+            <p>{lang.contact.p2}</p>
           </div>
-          <ContactForm predefinedSubject={predefinedSubject} />
+          <ContactForm predefinedSubject={predefinedSubject} lang={lang} />
         </div>
         <div className="contact_image">
           <Image
@@ -64,7 +56,10 @@ function contact({setActiveLink}) {
           />
         </div>
       </div>
-      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
+      <FooterNav
+        currentPage={currentPage}
+        setActiveLink={setActiveLink}
+      ></FooterNav>
     </>
   );
 }
