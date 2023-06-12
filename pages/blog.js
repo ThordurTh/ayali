@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import SignUpBox from "@components/SignUpBox";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -62,6 +63,9 @@ export default function blog({ articles }) {
               </Link>
             </motion.div>
           ))}
+        </div>
+        <div className="blog-signup-wrapper">
+          <SignUpBox />
         </div>
       </div>
     </>
