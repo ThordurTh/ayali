@@ -5,7 +5,15 @@ import portrait from "../assets/portrait.webp";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
 
-export default function index({setActiveLink}) {
+import Router, { useRouter } from "next/router";
+import en from "../locales/en";
+import da from "../locales/da";
+
+export default function index({ setActiveLink }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : da;
+
   const currentPage = 1;
   const activeLink = (path) => {
     setActiveLink(path);
@@ -33,34 +41,38 @@ export default function index({setActiveLink}) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
           >
-            <p className="job_title">
-              DIGITAL MARKETING <br />
-              CONSULTANT
-            </p>
+            <p className="job_title">{t.index.jobtitle}</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.5, ease: "easeOut" }}
           >
-            <p>Start your journey of exponential growth here!</p>
+            <p>{t.index.p}</p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: "50%"}}
+            initial={{ opacity: 0, y: "50%" }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
             className="index_ctas"
           >
             <Link href="/contact">
-              <a onClick={() => activeLink()} className="cta">Get started</a>
+              <a onClick={() => activeLink()} className="cta">
+                {t.index.cta1}
+              </a>
             </Link>
             <Link href="/services">
-              <a onClick={() => activeLink("/services")} className="cta2">Learn more</a>
+              <a onClick={() => activeLink("/services")} className="cta2">
+                {t.index.cta2}
+              </a>
             </Link>
           </motion.div>
         </div>
 
-        <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
+        <FooterNav
+          currentPage={currentPage}
+          setActiveLink={setActiveLink}
+        ></FooterNav>
       </div>
     </>
   );
