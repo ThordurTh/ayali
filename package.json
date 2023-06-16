@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.4",
+    "@emailjs/browser": "^3.11.0",
     "contentful": "^10.2.0",
     "framer-motion": "^10.12.16",
     "next": "^12.1.5",

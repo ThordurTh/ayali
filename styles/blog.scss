@@ -256,19 +256,27 @@ $color-primary-white: rgb(240, 240, 240);
 }
 
 .blog-signup-box {
-  background-color: var(--teal3);
+  background-color: var(--teal1);
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
+  // border: 2px solid var(--teal1);
+  padding: 1rem 1rem 2rem;
+  gap: 1rem;
+  // width: 100%;
+  @media screen and (min-width: 1080px) {
+    width: 50%;
+    margin-bottom: 100px;
+  }
   h4 {
     margin-top: 1rem;
-    color: white;
+    color: var(--teal6);
     margin-bottom: 0;
     text-transform: none;
   }
   p {
-    color: white;
+    color: var(--teal6);
     margin: 0;
     padding-top: 0;
     text-align: center;
@@ -277,5 +285,62 @@ $color-primary-white: rgb(240, 240, 240);
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 500px;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    height: 3.8rem;
+    div {
+      flex: 2;
+    }
+    input {
+      border: none;
+      border-radius: 5px 0 0 5px;
+      position: relative;
+      width: 100%;
+      padding: 1rem 18px;
+      font-size: var(--p);
+      color: var(--teal6);
+      margin-bottom: 30px;
+      border: 2px solid var(--teal3);
+      border-right-width: 0;
+      background: var(--teal1);
+      font-family: "Poppins", sans-serif;
+      outline: none;
+    }
+    label {
+      position: relative;
+      left: 18px;
+      top: -73px;
+      padding: 0 8px;
+      font-size: var(--p);
+      color: var(--teal6);
+      pointer-events: none;
+      transition: 0.5s;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+    button.cta {
+      // padding: 0.5rem 1rem;
+      flex: 1;
+      border-radius: 0 5px 5px 0;
+      height: auto;
+      font-size: var(--p);
+      background-color: var(--teal3);
+      border-color: var(--teal3);
+      padding: 0.5rem;
+    }
+    button.cta:hover {
+      color: var(--teal6);
+      background-color: var(--teal1);
+    }
+    input:focus ~ label,
+    .focus_valid {
+      top: -104px;
+      left: 10px;
+      color: var(--teal6);
+      // font-size: 0.8rem;
+      background-color: var(--teal1);
+    }
   }
 }

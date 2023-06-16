@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import en from "../locales/en";
 import da from "../locales/da";
 
@@ -55,9 +56,25 @@ function ContactForm({ predefinedSubject, lang }) {
       setErrorMessage("Please check the checkbox");
     }
   };
-
-  const handleFormSubmit = () => {
+  const form = useRef();
+  const handleFormSubmit = (e) => {
     setInvalidInputs([]);
+
+    emailjs
+      .sendForm(
+        "service_qw65rr9",
+        "template_jy5zoa9",
+        e.target,
+        "kIxaz89gws325fceG"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
