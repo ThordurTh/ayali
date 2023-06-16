@@ -7,7 +7,7 @@ import money from "../assets/money.webp";
 import brands from "../assets/brands.webp";
 import Image from "next/image";
 
-function cases({setActiveLink}) {
+function cases({ setActiveLink }) {
   const currentPage = 3;
   const activeLink = (path) => {
     setActiveLink(path);
@@ -45,12 +45,15 @@ function cases({setActiveLink}) {
           </div>
           <div>
             <Image src={brands} width={48} height={48} alt="brands icon" />
-            <p>+7 eCommerce brands</p>
+            <p>+6 eCommerce brands</p>
           </div>
         </div>
       </div>
       <Tabs />
-      <FooterNav currentPage={currentPage} setActiveLink={setActiveLink}></FooterNav>
+      <FooterNav
+        currentPage={currentPage}
+        setActiveLink={setActiveLink}
+      ></FooterNav>
     </>
   );
 }
