@@ -45,7 +45,7 @@ function cases({ setActiveLink }) {
           </div>
           <div>
             <Image src={brands} width={48} height={48} alt="brands icon" />
-            <p>+6 eCommerce brands</p>
+            <p>+7 eCommerce brands</p>
           </div>
         </div>
       </div>
