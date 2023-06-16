@@ -30,7 +30,7 @@ function contact({ setActiveLink, lang }) {
   return (
     <>
       <Head>
-        <title>AYA LI - Contact</title>
+        <title>{lang.contact.title}</title>
         <meta name="keywords" content="Some, good, keywords"></meta>
         <meta
           name="description"

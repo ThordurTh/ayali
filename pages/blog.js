@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import en from "../locales/en";
+import da from "../locales/da";
+import { useRouter } from "next/router";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -19,7 +23,16 @@ export async function getStaticProps() {
   };
 }
 
-export default function blog({ articles }) {
+export default function blog({ articles, setLang }) {
+  const router = useRouter();
+  const { locale } = router;
+  useEffect(() => {
+    setLang(en);
+    const locale = {
+      locale: "en",
+    };
+    router.push(router.pathname, router.asPath, locale);
+  }, []);
   return (
     <>
       <Head>

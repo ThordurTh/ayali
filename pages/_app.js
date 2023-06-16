@@ -61,6 +61,7 @@ function Application({ Component, pageProps }) {
             <Component
               setActiveLink={setActiveLink}
               lang={lang}
+              setLang={setLang}
               {...pageProps}
               key={router.asPath}
             />

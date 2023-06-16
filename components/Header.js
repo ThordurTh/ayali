@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 export default function Header({ activeLink, setActiveLink, lang, setLang }) {
   const router = useRouter();
   const { locale } = router;
-  console.log(lang);
   // const [lang, setLang] = useState(en);
   // const t = lang;
 
@@ -21,6 +20,7 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
       locale: "da",
     };
     router.push(router.pathname, router.asPath, locale);
+    console.log(router);
   };
   const handleEnglish = () => {
     setLang(en);
@@ -43,7 +43,7 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
   useEffect(() => {
     setActiveLink(window.location.pathname);
   }, []);
-
+  const regex = /\/blog.*/;
   return (
     <header>
       <nav className={`header_nav ${navbarOpen ? " show_menu" : " "}`}>
@@ -92,22 +92,26 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
             <Link href="/blog">
               <a onClick={() => closeBurger("/blog")}>{lang.header.nav6}</a>
             </Link>
-            <div className="language_toggle">
-              <span
-                onClick={handleEnglish}
-                className={`language_btn ${lang === en ? "selectedLang" : " "}`}
-              >
-                EN
-              </span>
-              <span
-                className={`language_btn ${
-                  lang === da ? "selectedLang " : " "
-                }`}
-                onClick={handleDanish}
-              >
-                DA
-              </span>
-            </div>
+            {!regex.test(router.asPath) && (
+              <div className="language_toggle">
+                <span
+                  onClick={handleEnglish}
+                  className={`language_btn ${
+                    lang === en ? "selectedLang" : " "
+                  }`}
+                >
+                  EN
+                </span>
+                <span
+                  className={`language_btn ${
+                    lang === da ? "selectedLang " : " "
+                  }`}
+                  onClick={handleDanish}
+                >
+                  DA
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </nav>
