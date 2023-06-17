@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-function SignUpBox() {
+function SignUpBox({ setIsVisible }) {
   const [focusValid, setFocusValid] = useState(false);
 
   const handleInput = (e) => {
@@ -15,6 +15,14 @@ function SignUpBox() {
 
   const form = useRef();
   const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    setIsVisible(true);
+
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 3500);
+
     emailjs
       .sendForm(
         "service_f9bacna",
@@ -30,6 +38,8 @@ function SignUpBox() {
           console.log(error.text);
         }
       );
+    e.target.reset();
+    setFocusValid(false);
   };
 
   return (
@@ -37,13 +47,7 @@ function SignUpBox() {
       <h4>Stay In the Loop!</h4>
       <p>Subscribe to the newsletter to get updates for every blogpost</p>
 
-      <form
-        name="sign-up"
-        method="post"
-        action={`/success`}
-        onSubmit={handleFormSubmit}
-        ref={form}
-      >
+      <form name="sign-up" method="post" onSubmit={handleFormSubmit} ref={form}>
         <div>
           <input onChange={handleInput} type="email" name="email" required />
           <label className={focusValid ? "focus_valid" : ""}>EMAIL</label>

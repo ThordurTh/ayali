@@ -71,16 +71,36 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
         </div>
         <div className={`desktop_links ${navbarOpen ? " open" : " "}`}>
           <Link href="/services">
-            <a onClick={() => closeBurger("/services")}>{lang.header.nav1}</a>
+            <a
+              className={activeLink === "/services" ? "active" : ""}
+              onClick={() => closeBurger("/services")}
+            >
+              {lang.header.nav1}
+            </a>
           </Link>
           <Link href="/cases">
-            <a onClick={() => closeBurger("/cases")}>{lang.header.nav2}</a>
+            <a
+              className={activeLink === "/cases" ? "active" : ""}
+              onClick={() => closeBurger("/cases")}
+            >
+              {lang.header.nav2}
+            </a>
           </Link>
           <Link href="/packages">
-            <a onClick={() => closeBurger("/packages")}>{lang.header.nav3}</a>
+            <a
+              className={activeLink === "/packages" ? "active" : ""}
+              onClick={() => closeBurger("/packages")}
+            >
+              {lang.header.nav3}
+            </a>
           </Link>
           <Link href="/company">
-            <a onClick={() => closeBurger("/company")}>{lang.header.nav4}</a>
+            <a
+              className={activeLink === "/company" ? "active" : ""}
+              onClick={() => closeBurger("/company")}
+            >
+              {lang.header.nav4}
+            </a>
           </Link>
           <Link href="/contact">
             <a className="cta" onClick={() => closeBurger("/kontakt")}>
@@ -90,28 +110,35 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
 
           <div className="nav2">
             <Link href="/blog">
-              <a onClick={() => closeBurger("/blog")}>{lang.header.nav6}</a>
+              <a
+                className={activeLink === "/blog" ? "active" : ""}
+                onClick={() => closeBurger("/blog")}
+              >
+                {lang.header.nav6}
+              </a>
             </Link>
-            {!regex.test(router.asPath) && (
-              <div className="language_toggle">
-                <span
-                  onClick={handleEnglish}
-                  className={`language_btn ${
-                    lang === en ? "selectedLang" : " "
-                  }`}
-                >
-                  EN
-                </span>
-                <span
-                  className={`language_btn ${
-                    lang === da ? "selectedLang " : " "
-                  }`}
-                  onClick={handleDanish}
-                >
-                  DA
-                </span>
-              </div>
-            )}
+            <div
+              className={
+                !regex.test(router.asPath)
+                  ? "language_toggle"
+                  : "language_toggle hidden"
+              }
+            >
+              <span
+                onClick={handleEnglish}
+                className={`language_btn ${lang === en ? "selectedLang" : " "}`}
+              >
+                EN
+              </span>
+              <span
+                className={`language_btn ${
+                  lang === da ? "selectedLang " : " "
+                }`}
+                onClick={handleDanish}
+              >
+                DA
+              </span>
+            </div>
           </div>
         </div>
       </nav>
