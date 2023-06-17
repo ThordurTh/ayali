@@ -38,15 +38,6 @@ export default function blog({ articles, setLang }) {
     router.push(router.pathname, router.asPath, locale);
   }, []);
 
-  const handleClick = () => {
-    setIsVisible(true);
-
-    // Set a timeout to hide the div after 5 seconds
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 3500);
-  };
-
   return (
     <>
       <Head>

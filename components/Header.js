@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 export default function Header({ activeLink, setActiveLink, lang, setLang }) {
   const router = useRouter();
-  const { locale } = router;
+  // const { locale } = router;
   // const [lang, setLang] = useState(en);
   // const t = lang;
 
@@ -20,7 +20,6 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
       locale: "da",
     };
     router.push(router.pathname, router.asPath, locale);
-    console.log(router);
   };
   const handleEnglish = () => {
     setLang(en);
