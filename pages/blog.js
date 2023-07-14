@@ -13,24 +13,25 @@ let client = require("contentful").createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
-export async function getStaticProps() {
-  let data = await client.getEntries({
-    content_type: "article",
-  });
-
-  return {
-    props: {
-      articles: data.items,
-    },
-  };
-}
-
-export default function blog({ articles, setLang }) {
+export default function blog({ setLang }) {
+  const [articles, setArticles] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
+
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await client.getEntries({
+          content_type: "article",
+        });
+        setArticles(response.items);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
     setLang(en);
     const locale = {
       locale: "en",
