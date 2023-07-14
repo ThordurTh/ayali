@@ -9,7 +9,7 @@ export default {
   },
   index: {
     jobtitle: "DIGITAL MARKETING CONSULTANT",
-    p: "Start your journey of exponential growth here!",
+    p: "I specialize in scaling eCommerce businesses with a holistic, and data-driven approach.",
     cta1: "GET STARTED",
     cta2: "LEARN MORE",
   },
@@ -23,13 +23,13 @@ export default {
       "Studying Business Psychology ignited my passion for marketing. I ventured into the world of digital marketing, launching my own consultancy to help businesses grow. With innovative strategies and a strong foundation, I embarked on an exciting journey at the beginning of my career.",
     h2time: "First Client - January 2022",
     p2time:
-      "My inaugural client, a prominent marketing agency, offered me a freelance position, igniting my journey. Working with eight e-commerce web shops, I gained hands-on experience in paid social media advertising, expanding later into Google ads and e-mail marketing.",
+      "It all started with my first client, a well-known marketing agency, who extended a freelance position to me. Throughout my time with them, I had the privilege of working with 10 e-commerce web shops, gaining invaluable hands-on experience in paid social media advertising. As my expertise grew, I expanded my skills to include Google ads and e-mail marketing.",
     h3time: "Current standing",
     p3time:
-      "Presently, my portfolio has expanded to encompass three additional clients, in addition to the marketing agency. Moreover, I have cultivated partnerships with an impressive roster of 12-13 e-commerce businesses, boosting their digital marketing efforts across various platforms, encompassing Google ads, e-mail marketing, and paid advertisements in social media realms.",
+      "My clientele has expanded to include four additional clients, in addition to the marketing agency. The agency is experiencing growth, with more clients in the pipeline. I highly value long-term collaborations and strive not only to acquire new clients but also to ensure the satisfaction of all existing clients. My goal is to consistently deliver results and provide a level of service that exceeds expectations.",
     h4time: "The future",
     p4time:
-      "For the future, I envision expanding my company by hiring more digital consultants and onboarding new clients. This growth-oriented approach aims to further enhance our presence in the digital marketing industry.",
+      "My mission is to establish myself as the go-to digital marketing agency for e-commerce businesses aiming to increase their online sales. Through a dedicated focus on long-term strategies and a commitment to delivering outstanding services, my ultimate goal is to grow my business through positive recommendations from my existing clients. Communication, transparency, and quality are my three core values. Combining them with Top Marketing Hard Skills is the formula for positive high-retention clients and growing eCommerce businesses.",
   },
   contact: {
     title: "AYA LI - CONTACT",
@@ -44,7 +44,8 @@ export default {
     message: "message",
     asterisk: "* means that the field is required",
     checkbox:
-      "By sending this form, I confirm that I have read and acknowledged the privacy policy.",
+      "By sending this form, I confirm that I have read and acknowledged the ",
+    privacyPolicy: "privacy policy",
     submit: "submit",
   },
 };

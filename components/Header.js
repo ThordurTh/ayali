@@ -77,14 +77,14 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
               {lang.header.nav1}
             </a>
           </Link>
-          <Link href="/cases">
+          {/* <Link href="/cases">
             <a
               className={activeLink === "/cases" ? "active" : ""}
               onClick={() => closeBurger("/cases")}
             >
               {lang.header.nav2}
             </a>
-          </Link>
+          </Link> */}
           <Link href="/packages">
             <a
               className={activeLink === "/packages" ? "active" : ""}

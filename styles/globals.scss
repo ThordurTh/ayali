@@ -113,7 +113,8 @@ a:not(
     .button,
     .blog-posts-page-content a,
     footer ul a,
-    .footer_nav a
+    .footer_nav a,
+    .acknowledge a
   ):after {
   content: "";
   position: absolute;
@@ -134,7 +135,8 @@ a:not(
     .button,
     .blog-posts-page-content a,
     footer ul a,
-    .footer_nav a
+    .footer_nav a,
+    .acknowledge a
   ):hover:after {
   transform: scaleX(1);
   transform-origin: left;
@@ -213,4 +215,10 @@ abbr[title] {
 
 .hidden {
   visibility: hidden;
+}
+
+.privacy_policy {
+  max-width: 900px;
+  padding: 0 2rem;
+  margin: 0 auto;
 }

@@ -9,7 +9,7 @@ export default {
   },
   index: {
     jobtitle: "DIGITAL MARKEDSFØRINGS KONSULENT",
-    p: "Start din rejse med eksponentiel vækst her!",
+    p: "Jeg er specialiseret i at skalere e-handelsvirksomheder med en holistisk og datadrevet tilgang.",
     cta1: "KOM IGANG",
     cta2: "LÆR MERE",
   },
@@ -23,13 +23,13 @@ export default {
       "At studere Business Psychology tændte min passion for marketing. Jeg vovede mig ind i verden af digital markedsføring og lancerede mit eget konsulentfirma for at hjælpe virksomheder med at vokse. Med innovative strategier og et stærkt fundament begav jeg mig ud på en spændende rejse i begyndelsen af min karriere.",
     h2time: "Første kunde - januar 2022",
     p2time:
-      "Min første kunde, et fremtrædende marketingbureau, tilbød mig en freelancestilling, hvilket satte gang i min rejse. I samarbejde med otte e-handelswebshops fik jeg praktisk erfaring med betalt annoncering på sociale medier, og udvidede senere til Google-annoncer og e-mail marketing.",
+      "Det hele startede med min første kunde, et velkendt marketingbureau, som udvidede en freelancestilling til mig. Gennem hele min tid med dem havde jeg det privilegium at arbejde med 10 e-handelswebshops, hvor jeg fik uvurderlig praktisk erfaring med betalt annoncering på sociale medier. Efterhånden som min ekspertise voksede, udvidede jeg mine kompetencer til også at omfatte Google-annoncer og e-mail marketing.",
     h3time: "Nuværende stilling",
     p3time:
-      "På nuværende tidspunkt er min portefølje udvidet til at omfatte yderligere tre kunder ud over marketingbureauet. Desuden har jeg opdyrket partnerskaber med en imponerende liste på 12-13 e-handelsvirksomheder, der har styrket deres digitale marketingindsats på tværs af forskellige platforme, omfattende Google-annoncer, e-mail-marketing og betalte annoncer i sociale medier.",
+      "Min kundekreds er udvidet til at omfatte yderligere fire kunder, foruden marketingbureauet. Bureauet oplever vækst, med flere kunder i pipelinen. Jeg vægter langsigtede samarbejder højt og stræber ikke kun efter at skaffe nye kunder, men også at sikre tilfredshed hos alle eksisterende kunder. Mit mål er konsekvent at levere resultater og levere et serviceniveau, der overgår forventningerne.",
     h4time: "Fremtiden",
     p4time:
-      "For fremtiden ser jeg for mig at udvide min virksomhed ved at ansætte flere digitale konsulenter og onboarde nye kunder. Denne vækstorienterede tilgang har til formål at øge vores tilstedeværelse i den digitale marketingindustri yderligere.",
+      "Min mission er at etablere mig som det bedste digitale marketingbureau for e-handelsvirksomheder, der sigter mod at øge deres onlinesalg. Gennem et dedikeret fokus på langsigtede strategier og en forpligtelse til at levere fremragende tjenester, er mit ultimative mål at vokse min forretning gennem positive anbefalinger fra mine eksisterende kunder. Kommunikation, gennemsigtighed og kvalitet er mine tre kerneværdier. At kombinere dem med Top Marketing Hard Skills er formlen for positive kunder med høj fastholdelse og voksende e-handelsvirksomheder.",
   },
   contact: {
     title: "AYA LI - KONTAKT",

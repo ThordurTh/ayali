@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import SignUpBox from "@components/SignUpBox";
 import { useEffect } from "react";
 import en from "../locales/en";
 import da from "../locales/da";
@@ -43,7 +42,11 @@ export default function blog({ setLang }) {
     <>
       <Head>
         <title>AYA LI - Blog</title>
-        <meta name="keywords" content="Some, good, keywords"></meta>
+        <meta name="author" content="Aya Li"></meta>
+        <meta
+          name="keywords"
+          content="Consultancy, digital consultant, marketing, digital marketing consultant"
+        ></meta>
         <meta
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Blog"
@@ -98,9 +101,6 @@ export default function blog({ setLang }) {
               </Link>
             </motion.div>
           ))}
-        </div>
-        <div className="blog-signup-wrapper">
-          <SignUpBox setIsVisible={setIsVisible} />
         </div>
       </div>
     </>

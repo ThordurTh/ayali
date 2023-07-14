@@ -144,7 +144,13 @@ function ContactForm({ predefinedSubject, lang }) {
           onChange={handleInputChange}
           required
         />
-        <span>{lang.contact.checkbox}*</span>
+        <span>
+          {lang.contact.checkbox}
+          <a href="/privacyPolicy" target="_blank">
+            {lang.contact.privacyPolicy}
+          </a>
+          *
+        </span>
       </div>
       <button className="cta submit" type="submit">
         {lang.contact.submit}

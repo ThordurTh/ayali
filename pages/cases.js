@@ -16,7 +16,11 @@ function cases({ setActiveLink }) {
     <>
       <Head>
         <title>AYA LI - Cases</title>
-        <meta name="keywords" content="Some, good, keywords"></meta>
+        <meta name="author" content="Aya Li"></meta>
+        <meta
+          name="keywords"
+          content="Consultancy, digital consultant, marketing, digital marketing consultant"
+        ></meta>
         <meta
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Cases"

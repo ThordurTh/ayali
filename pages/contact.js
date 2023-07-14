@@ -20,18 +20,24 @@ function contact({ setActiveLink, lang }) {
   let predefinedSubject = "";
 
   if (value === "package1") {
-    predefinedSubject = "Free 30 minute call";
+    predefinedSubject = "Free call";
   } else if (value === "package2") {
-    predefinedSubject = "Short-term Project";
+    predefinedSubject = "Fixed Fee Solution";
   } else if (value === "package3") {
-    predefinedSubject = "Long-term Project";
+    predefinedSubject = "Hybrid Fee Solution";
+  } else if (value === "package3") {
+    predefinedSubject = "Performance Fee Solution";
   }
 
   return (
     <>
       <Head>
         <title>{lang.contact.title}</title>
-        <meta name="keywords" content="Some, good, keywords"></meta>
+        <meta name="author" content="Aya Li"></meta>
+        <meta
+          name="keywords"
+          content="Consultancy, digital consultant, marketing, digital marketing consultant"
+        ></meta>
         <meta
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Contact"

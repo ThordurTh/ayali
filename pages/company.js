@@ -13,7 +13,11 @@ function company({ setActiveLink, lang }) {
     <>
       <Head>
         <title>{lang.company.title}</title>
-        <meta name="keywords" content="Some, good, keywords"></meta>
+        <meta
+          name="keywords"
+          content="Consultancy, digital consultant, marketing, digital marketing consultant"
+        ></meta>
+        <meta name="author" content="Aya Li"></meta>
         <meta
           name="description"
           content="AYA LI - Digitial Marketing Consultant - Company"

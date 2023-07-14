@@ -2,13 +2,9 @@ footer {
   margin-top: 1rem;
   width: 100%;
 
-  @media screen and (min-width: 1080px) {
-    position: absolute;
-    bottom: 0;
-  }
-  @media screen and (max-height: 1080px) {
-    position: static;
-  }
+  position: static;
+  bottom: 0;
+
   ul {
     display: flex;
     flex-direction: column;

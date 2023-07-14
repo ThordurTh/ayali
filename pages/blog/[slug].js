@@ -46,7 +46,11 @@ export default function Article({ article }) {
     <>
       <Head>
         <title>AYA LI - Blog - {article.fields.title}</title>
-        <meta name="keywords" content="Some, good, keywords"></meta>
+        <meta name="author" content="Aya Li"></meta>
+        <meta
+          name="keywords"
+          content="Consultancy, digital consultant, marketing, digital marketing consultant"
+        ></meta>
         <meta
           name="description"
           content={`AYA LI - Digitial Marketing Consultant - Blog - ${article.fields.title}`}
