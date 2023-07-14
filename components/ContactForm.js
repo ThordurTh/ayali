@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import en from "../locales/en";
+import da from "../locales/da";
 
-function ContactForm({ predefinedSubject }) {
+function ContactForm({ predefinedSubject, lang }) {
   const [inputValues, setInputValues] = useState({
     firstName: "",
     lastName: "",
@@ -53,9 +56,25 @@ function ContactForm({ predefinedSubject }) {
       setErrorMessage("Please check the checkbox");
     }
   };
-
-  const handleFormSubmit = () => {
+  const form = useRef();
+  const handleFormSubmit = (e) => {
     setInvalidInputs([]);
+
+    emailjs
+      .sendForm(
+        "service_qw65rr9",
+        "template_jy5zoa9",
+        e.target,
+        "kIxaz89gws325fceG"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -69,10 +88,10 @@ function ContactForm({ predefinedSubject }) {
       <input type="hidden" name="form-name" value="contact" />
       <div className="input_wrapper">
         {[
-          { name: "firstName", label: "First Name" },
-          { name: "lastName", label: "Last Name" },
-          { name: "email", label: "Email" },
-          { name: "company", label: "Company" },
+          { name: "firstName", label: lang.contact.firstName },
+          { name: "lastName", label: lang.contact.lastName },
+          { name: "email", label: lang.contact.email },
+          { name: "company", label: lang.contact.company },
         ].map(({ name, label }) => (
           <div className="input_field" key={name}>
             <input
@@ -97,7 +116,7 @@ function ContactForm({ predefinedSubject }) {
             required
           />
           <label className={invalidInputs.includes("subject") ? "invalid" : ""}>
-            Subject*
+            {lang.contact.subject}*
           </label>
         </div>
         <div className="text_field">
@@ -109,12 +128,14 @@ function ContactForm({ predefinedSubject }) {
           ></textarea>
           <label
             htmlFor="message"
-            className={invalidInputs.includes("message") ? "invalid_textarea" : ""}
+            className={
+              invalidInputs.includes("message") ? "invalid_textarea" : ""
+            }
           >
-            Message*
+            {lang.contact.message}*
           </label>
         </div>
-        <span className="asterisk">* means that the field is required</span>
+        <span className="asterisk">{lang.contact.asterisk}*</span>
       </div>
       <div className="acknowledge">
         <input
@@ -123,15 +144,12 @@ function ContactForm({ predefinedSubject }) {
           onChange={handleInputChange}
           required
         />
-        <span>
-          By sending this form, I confirm that I have read and acknowledged the
-          privacy policy.
-        </span>
+        <span>{lang.contact.checkbox}*</span>
       </div>
       <button className="cta submit" type="submit">
-        SUBMIT
+        {lang.contact.submit}
       </button>
-      
+
       {errorMessage && <p className="error">{errorMessage}</p>}
     </form>
   );

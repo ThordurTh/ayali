@@ -2,16 +2,31 @@ import Image from "next/image";
 import logo from "../assets/logo.webp";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import en from "../locales/en";
+import da from "../locales/da";
+import { useRouter } from "next/router";
 
-export default function Header({activeLink, setActiveLink}) {
-  const [danish, setDanish] = useState(false);
+export default function Header({ activeLink, setActiveLink, lang, setLang }) {
+  const router = useRouter();
+  // const { locale } = router;
+  // const [lang, setLang] = useState(en);
+  // const t = lang;
+
   // const [activeLink, setActiveLink] = useState("");
 
   const handleDanish = () => {
-    setDanish(true);
+    setLang(da);
+    const locale = {
+      locale: "da",
+    };
+    router.push(router.pathname, router.asPath, locale);
   };
   const handleEnglish = () => {
-    setDanish(false);
+    setLang(en);
+    const locale = {
+      locale: "en",
+    };
+    router.push(router.pathname, router.asPath, locale);
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -27,7 +42,7 @@ export default function Header({activeLink, setActiveLink}) {
   useEffect(() => {
     setActiveLink(window.location.pathname);
   }, []);
-
+  const regex = /\/blog.*/;
   return (
     <header>
       <nav className={`header_nav ${navbarOpen ? " show_menu" : " "}`}>
@@ -40,7 +55,8 @@ export default function Header({activeLink, setActiveLink}) {
                 alt="logo"
                 // width={96}
                 // height={87}
-                layout="fill"              />
+                layout="fill"
+              />
             </a>
           </Link>
           <div
@@ -54,83 +70,41 @@ export default function Header({activeLink, setActiveLink}) {
         </div>
         <div className={`desktop_links ${navbarOpen ? " open" : " "}`}>
           <Link href="/services">
-            {danish ? (
-              <a
-                className={activeLink === "/services" ? "active" : ""}
-                onClick={() => closeBurger("/services")}
-              >
-                SERVICES{" "}
-              </a>
-            ) : (
-              <a
-                className={activeLink === "/services" ? "active" : ""}
-                onClick={() => closeBurger("/services")}
-              >
-                SERVICES{" "}
-              </a>
-            )}
+            <a
+              className={activeLink === "/services" ? "active" : ""}
+              onClick={() => closeBurger("/services")}
+            >
+              {lang.header.nav1}
+            </a>
           </Link>
           <Link href="/cases">
-            {danish ? (
-              <a
-                className={activeLink === "/cases" ? "active" : ""}
-                onClick={() => closeBurger("/cases")}
-              >
-                CASES
-              </a>
-            ) : (
-              <a
-                className={activeLink === "/cases" ? "active" : ""}
-                onClick={() => closeBurger("/cases")}
-              >
-                CASES
-              </a>
-            )}
+            <a
+              className={activeLink === "/cases" ? "active" : ""}
+              onClick={() => closeBurger("/cases")}
+            >
+              {lang.header.nav2}
+            </a>
           </Link>
           <Link href="/packages">
-            {danish ? (
-              <a
-                className={activeLink === "/packages" ? "active" : ""}
-                onClick={() => closeBurger("/packages")}
-              >
-                PAKKER
-              </a>
-            ) : (
-              <a
-                className={activeLink === "/packages" ? "active" : ""}
-                onClick={() => closeBurger("/packages")}
-              >
-                PACKAGES
-              </a>
-            )}
+            <a
+              className={activeLink === "/packages" ? "active" : ""}
+              onClick={() => closeBurger("/packages")}
+            >
+              {lang.header.nav3}
+            </a>
           </Link>
           <Link href="/company">
-            {danish ? (
-              <a
-                className={activeLink === "/company" ? "active" : ""}
-                onClick={() => closeBurger("/company")}
-              >
-                VIRKSOMHED
-              </a>
-            ) : (
-              <a
-                className={activeLink === "/company" ? "active" : ""}
-                onClick={() => closeBurger("/company")}
-              >
-                COMPANY
-              </a>
-            )}
+            <a
+              className={activeLink === "/company" ? "active" : ""}
+              onClick={() => closeBurger("/company")}
+            >
+              {lang.header.nav4}
+            </a>
           </Link>
           <Link href="/contact">
-            {danish ? (
-              <a className="cta" onClick={closeBurger}>
-                KONTAKT
-              </a>
-            ) : (
-              <a className="cta" onClick={closeBurger}>
-                CONTACT
-              </a>
-            )}
+            <a className="cta" onClick={() => closeBurger("/kontakt")}>
+              {lang.header.nav5}
+            </a>
           </Link>
 
           <div className="nav2">
@@ -139,18 +113,26 @@ export default function Header({activeLink, setActiveLink}) {
                 className={activeLink === "/blog" ? "active" : ""}
                 onClick={() => closeBurger("/blog")}
               >
-                BLOG
+                {lang.header.nav6}
               </a>
             </Link>
-            <div className="language_toggle">
+            <div
+              className={
+                !regex.test(router.asPath)
+                  ? "language_toggle"
+                  : "language_toggle hidden"
+              }
+            >
               <span
-                className={`language_btn ${danish ? " " : " selectedLang"}`}
                 onClick={handleEnglish}
+                className={`language_btn ${lang === en ? "selectedLang" : " "}`}
               >
                 EN
               </span>
               <span
-                className={`language_btn ${!danish ? " " : " selectedLang"}`}
+                className={`language_btn ${
+                  lang === da ? "selectedLang " : " "
+                }`}
                 onClick={handleDanish}
               >
                 DA

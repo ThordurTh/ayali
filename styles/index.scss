@@ -9,14 +9,13 @@
     flex-direction: column;
     max-width: 470px;
     gap: 1rem;
-    @media screen and (min-width:1080px) {
+    @media screen and (min-width: 1080px) {
       flex-direction: row;
       gap: 0;
       .cta2 {
         margin-left: 1rem;
       }
     }
-    
   }
   @media screen and (min-width: 1080px) {
     flex-direction: row;
@@ -35,6 +34,7 @@
     @media screen and (min-width: 1080px) {
       text-align: left;
       margin-bottom: 1.1rem;
+      max-width: 565px;
     }
     h1 {
       font-family: "Poppins", sans-serif;
@@ -69,7 +69,8 @@
         text-align: left;
       }
     }
-    .cta, .cta2 {
+    .cta,
+    .cta2 {
       padding: 1rem 2rem;
     }
   }
@@ -79,7 +80,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .hero_image{
-      max-width: 300px;
-    }
+  .hero_image {
+    max-width: 300px;
+  }
 }

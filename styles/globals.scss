@@ -161,7 +161,7 @@ a:not(
   cursor: pointer;
 }
 .cta {
-  color: var(--teal6) !important;
+  color: var(--teal6);
   background: var(--teal1);
 }
 .cta2 {
@@ -171,7 +171,7 @@ a:not(
 
 .cta:hover {
   background-color: transparent;
-  color: var(--teal1) !important;
+  color: var(--teal1);
 }
 .cta2:hover {
   background: var(--teal3);
@@ -209,4 +209,8 @@ abbr[title] {
 }
 .success-message {
   min-height: 72vh;
+}
+
+.hidden {
+  visibility: hidden;
 }

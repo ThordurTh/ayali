@@ -1,6 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import SignUpBox from "@components/SignUpBox";
+import { useEffect } from "react";
+import en from "../locales/en";
+import da from "../locales/da";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -19,7 +25,19 @@ export async function getStaticProps() {
   };
 }
 
-export default function blog({ articles }) {
+export default function blog({ articles, setLang }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const router = useRouter();
+  const { locale } = router;
+  useEffect(() => {
+    setLang(en);
+    const locale = {
+      locale: "en",
+    };
+    router.push(router.pathname, router.asPath, locale);
+  }, []);
+
   return (
     <>
       <Head>
@@ -31,6 +49,23 @@ export default function blog({ articles }) {
         ></meta>
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            className="notification"
+            transition={{
+              duration: 1.25,
+              ease: "easeOut",
+            }}
+          >
+            Thank you for subscribing to the newsletter!
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="blog-page-wrapper">
         <h1>Blog</h1>
         <div className="blog-cards-container">
@@ -62,6 +97,9 @@ export default function blog({ articles }) {
               </Link>
             </motion.div>
           ))}
+        </div>
+        <div className="blog-signup-wrapper">
+          <SignUpBox setIsVisible={setIsVisible} />
         </div>
       </div>
     </>
