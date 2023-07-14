@@ -10,47 +10,23 @@ const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
-export async function getStaticPaths() {
-  let data;
-  try {
-    data = await client.getEntries({
-      content_type: "article",
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      paths: [],
-      fallback: false,
-    };
-  }
+export async function getServerSideProps({ params }) {
+  const response = await client.getEntries({
+    content_type: "article",
+    "fields.slug": params.slug,
+  });
 
-  const paths = data.items.map((item) => ({
-    params: { slug: item.fields.slug },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  let data;
-  try {
-    data = await client.getEntries({
-      content_type: "article",
-      "fields.slug": params.slug,
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
+  if (!response.items.length) {
     return {
       notFound: true,
     };
   }
 
+  const article = response.items[0];
+
   return {
     props: {
-      article: data.items[0],
+      article,
     },
   };
 }
