@@ -5,7 +5,7 @@ import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 
 function company({ setActiveLink, lang }) {
-  const currentPage = 5;
+  const currentPage = 4;
   const activeLink = (path) => {
     setActiveLink(path);
   };

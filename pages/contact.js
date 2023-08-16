@@ -9,7 +9,7 @@ import en from "../locales/en";
 import da from "../locales/da";
 
 function contact({ setActiveLink, lang }) {
-  const currentPage = 6;
+  const currentPage = 5;
   const activeLink = (path) => {
     setActiveLink(path);
   };

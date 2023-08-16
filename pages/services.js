@@ -36,7 +36,7 @@ function services({ setActiveLink, lang }) {
       </Head>
       <section className="services-hero">
         <h1>{lang.services.heading}</h1>
-        <p>{lang.services.p1}</p>
+        <p>{lang.services.p}</p>
       </section>
 
       <section className="strategies">

@@ -16,7 +16,7 @@ export default {
   services: {
     title: "AYA LI - SERVICES",
     heading: "Tailored Solutions",
-    p1: "Scale your eCommerce business by successfully overcoming your marketing challenges with a tailored digital marketing strategy.",
+    p: "Scale your eCommerce business by successfully overcoming your marketing challenges with a tailored digital marketing strategy.",
     h3tactics: "Digital Marketing Tactics",
     litactics: [
       "Paid ads: Facebook, Instagram & TikTok",
@@ -41,7 +41,40 @@ export default {
     ],
     button: "See Packages",
   },
-  packages: {},
+  packages: {
+    title: "AYA LI - Packages",
+    heading: "Packages",
+    p: "Each package is designed to meet your specific needs and deliver optimal results. I understand that every business is unique, and that's why I offer a selection of packages that cater to various objectives and budgets.",
+    h3free: "Book a Free Call",
+    p1free:
+      "During our chat, we'll take the time to identify the digital marketing needs of your business. We'll evaluate the potential of working together and how that can help you reach your business goals. This chat is free and there's absolutely no obligation - so you have nothing to lose!",
+    p2free: "The intro chat typically takes around 45 minutes.",
+    h3fixed: "Fixed Fee Solution",
+    lifixed: [
+      "A payment solution charging a fixed fee per month",
+      "Weekly reporting and optimization",
+      "Monthly strategy meetings",
+      "No binding period",
+      "Running month plus 1 month of termination",
+    ],
+    h3hybrid: "Hybrid Fee Solution",
+    lihybrid: [
+      "A payment solution charging a fixed fee plus a performance fee of x percentage of revenue per month",
+      "Weekly reporting and optimization",
+      "Monthly strategy meetings",
+      "3 months of binding period",
+      "Running month plus 1 month of termination",
+    ],
+    h3performance: "Performance Fee Solution",
+    liperformance: [
+      "A payment solution charging a performance fee of x percentage of revenue per month",
+      "Weekly reporting and optimization",
+      "Monthly strategy meetings",
+      "6 months of binding period",
+      "Running month plus 1 month of termination",
+    ],
+    button: "Start Now",
+  },
   company: {
     title: "AYA LI - COMPANY",
     heading: "About me",

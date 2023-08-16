@@ -8,7 +8,7 @@ const FooterNav = ({ currentPage, setActiveLink }) => {
   const pageNames = [
     "front",
     "services",
-    "cases",
+    // "cases",
     "packages",
     "company",
     "contact",
@@ -23,9 +23,7 @@ const FooterNav = ({ currentPage, setActiveLink }) => {
         <Link
           href={currentPage === 2 ? "/" : `/${pageNames[previousPage - 1]}`}
         >
-          <a
-           onClick={() => activeLink(`/${pageNames[previousPage-1]}`)}
-          >
+          <a onClick={() => activeLink(`/${pageNames[previousPage - 1]}`)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,7 +43,7 @@ const FooterNav = ({ currentPage, setActiveLink }) => {
       )}
       {nextPage && (
         <Link href={pageNames[nextPage - 1]}>
-          <a onClick={() => activeLink(`/${pageNames[nextPage-1]}`)}>
+          <a onClick={() => activeLink(`/${pageNames[nextPage - 1]}`)}>
             {pageNames[nextPage - 1]}
             <svg
               xmlns="http://www.w3.org/2000/svg"

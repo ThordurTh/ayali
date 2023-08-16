@@ -8,7 +8,7 @@ import brands from "../assets/brands.webp";
 import Image from "next/image";
 
 function cases({ setActiveLink }) {
-  const currentPage = 3;
+  // const currentPage = 3;
   const activeLink = (path) => {
     setActiveLink(path);
   };
@@ -55,7 +55,7 @@ function cases({ setActiveLink }) {
       </div>
       <Tabs />
       <FooterNav
-        currentPage={currentPage}
+        // currentPage={currentPage}
         setActiveLink={setActiveLink}
       ></FooterNav>
     </>

@@ -7,7 +7,7 @@
   padding: 2rem 1rem 2rem 1rem;
   margin-top: 2rem;
   :nth-child(1) {
-    max-width: 500px;
+    max-width: 750px;
   }
   :nth-child(2) {
     max-width: 600px;
@@ -16,8 +16,8 @@
 .strategies {
   padding: 2rem;
   display: grid;
-  @media screen and (max-width:1080px) {
-      gap: 2.5rem;
+  @media screen and (max-width: 1080px) {
+    gap: 2.5rem;
   }
   .cta {
     margin-top: 2rem;
@@ -49,7 +49,7 @@
     .motion-cta {
       grid-column: 2/3;
       margin-top: 2rem;
-      @media screen and (min-height:1080px) {
+      @media screen and (min-height: 1080px) {
         margin-bottom: 2rem;
       }
     }
