@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import portrait from "../assets/portrait.webp";
+import company_picture from "../assets/company_picture.webp";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 
@@ -30,7 +30,7 @@ function company({ setActiveLink, lang }) {
           <p>{lang.company.p1}</p>
           <p>{lang.company.p2}</p>
           <div className="company-image">
-            <Image priority src={portrait} alt="portrait of AYA LI" />
+            <Image priority src={company_picture} alt="portrait of AYA LI" />
           </div>
         </div>
         <section className="block-content t-block-teal l-block-spacing">

@@ -31,8 +31,8 @@ header {
       }
       .logo_link {
         padding: 1rem;
-        width: 76.8px;
-        height: 69.6px;
+        width: 75px;
+        height: 75px;
         position: relative;
         display: block;
         @media screen and (max-width: 1080px) {
@@ -41,8 +41,6 @@ header {
 
         @media screen and (min-width: 1080px) {
           margin: 0 auto;
-          width: 96px;
-          height: 87px;
         }
         .logo {
           position: absolute;

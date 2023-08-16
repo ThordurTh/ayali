@@ -3,7 +3,6 @@ import Link from "next/link";
 import Head from "next/head";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 function packages({ setActiveLink }) {
   const currentPage = 4;

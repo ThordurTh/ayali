@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import FooterNav from "@components/FooterNav";
-import { motion } from "framer-motion";
 
 import Router, { useRouter } from "next/router";
 import en from "../locales/en";

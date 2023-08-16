@@ -1,7 +1,5 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import en from "../locales/en";
-import da from "../locales/da";
 
 function ContactForm({ predefinedSubject, lang }) {
   const [inputValues, setInputValues] = useState({

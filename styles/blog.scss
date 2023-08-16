@@ -261,10 +261,8 @@ $color-primary-white: rgb(240, 240, 240);
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
-  // border: 2px solid var(--teal1);
   padding: 1rem 1rem 2rem;
   gap: 1rem;
-  // width: 100%;
   @media screen and (min-width: 1080px) {
     width: 50%;
     margin-bottom: 100px;
@@ -321,7 +319,6 @@ $color-primary-white: rgb(240, 240, 240);
       letter-spacing: 0.13em;
     }
     button.cta {
-      // padding: 0.5rem 1rem;
       flex: 1;
       border-radius: 0 5px 5px 0;
       height: auto;
@@ -339,7 +336,6 @@ $color-primary-white: rgb(240, 240, 240);
       top: -104px;
       left: 10px;
       color: var(--teal6);
-      // font-size: 0.8rem;
       background-color: var(--teal1);
     }
   }
@@ -348,7 +344,6 @@ $color-primary-white: rgb(240, 240, 240);
 .notification {
   position: fixed;
   max-width: 300px;
-  // height: 100px;
   z-index: 15;
   border-radius: 5px;
   background-color: var(--teal1);

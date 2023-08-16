@@ -8,11 +8,6 @@ import { useRouter } from "next/router";
 
 export default function Header({ activeLink, setActiveLink, lang, setLang }) {
   const router = useRouter();
-  // const { locale } = router;
-  // const [lang, setLang] = useState(en);
-  // const t = lang;
-
-  // const [activeLink, setActiveLink] = useState("");
 
   const handleDanish = () => {
     setLang(da);
@@ -49,14 +44,7 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
         <div className="logo_burger">
           <Link href="/">
             <a onClick={closeBurger} className="logo_link">
-              <Image
-                className="logo"
-                src={logo}
-                alt="logo"
-                // width={96}
-                // height={87}
-                layout="fill"
-              />
+              <Image className="logo" src={logo} alt="logo" layout="fill" />
             </a>
           </Link>
           <div
@@ -77,14 +65,6 @@ export default function Header({ activeLink, setActiveLink, lang, setLang }) {
               {lang.header.nav1}
             </a>
           </Link>
-          {/* <Link href="/cases">
-            <a
-              className={activeLink === "/cases" ? "active" : ""}
-              onClick={() => closeBurger("/cases")}
-            >
-              {lang.header.nav2}
-            </a>
-          </Link> */}
           <Link href="/packages">
             <a
               className={activeLink === "/packages" ? "active" : ""}

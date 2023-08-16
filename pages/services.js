@@ -13,9 +13,8 @@ import speakerphone from "../assets/speakerphone.webp";
 import piechart from "../assets/pie-chart.webp";
 import FooterNav from "@components/FooterNav";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-function services({ setActiveLink }) {
+function services({ setActiveLink, lang }) {
   const currentPage = 2;
   const activeLink = (path) => {
     setActiveLink(path);
@@ -23,7 +22,7 @@ function services({ setActiveLink }) {
   return (
     <>
       <Head>
-        <title>AYA LI - Services</title>
+        <title>{lang.services.title}</title>
         <meta name="author" content="Aya Li"></meta>
         <meta
           name="keywords"
@@ -36,11 +35,8 @@ function services({ setActiveLink }) {
         <meta name="theme-color" content="#c7f3e9" />
       </Head>
       <section className="services-hero">
-        <h1>TAILORED SOLUTIONS</h1>
-        <p>
-          Scale your eCommerce business by successfully overcoming your
-          marketing challenges with a tailored digital marketing strategy.
-        </p>
+        <h1>{lang.services.heading}</h1>
+        <p>{lang.services.p1}</p>
       </section>
 
       <section className="strategies">
@@ -49,12 +45,11 @@ function services({ setActiveLink }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
         >
-          <h3>DIGITAL MARKETING TACTICS</h3>
+          <h3>{lang.services.h3tactics}</h3>
           <ul>
-            <li>Paid ads: Facebook, Instagram & TikTok</li>
-            <li>E-mail marketing</li>
-            <li>Google Ads</li>
-            <li>Copywriting that converts</li>
+            {lang.services.litactics.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <div className="icons-container">
             <Image
@@ -81,10 +76,9 @@ function services({ setActiveLink }) {
         >
           <h3>MARKETING STRATEGY</h3>
           <ul>
-            <li>Market and Competitor Analysis</li>
-            <li>Customer Persona and Targeting Strategy</li>
-            <li>Omnichannel and Funnel Strategy</li>
-            <li>Branding and Communication Strategy</li>
+            {lang.services.listrategy.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <div className="icons-container">
             <Image src={strategy} width={48} height={48} alt="strategy icon" />
@@ -98,11 +92,9 @@ function services({ setActiveLink }) {
         >
           <h3>OVERALL BUSINESS OBJECTIVES</h3>
           <ul>
-            <li>Increase Online Sales</li>
-            <li>Expand Customer Base</li>
-            <li>Enhance Brand Awareness</li>
-            <li>Improve Customer Engagement and Retention</li>
-            <li>Optimize Website Performance</li>
+            {lang.services.liobjectives.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
           <div className="icons-container">
             <Image src={chart} width={48} height={48} alt="chart icon" />
@@ -123,7 +115,7 @@ function services({ setActiveLink }) {
         >
           <Link href="/packages">
             <a onClick={() => activeLink("/packages")} className="cta">
-              See Packages
+              {lang.services.button}
             </a>
           </Link>
         </motion.div>

@@ -98,7 +98,6 @@ function Tabs() {
                   width="32"
                   height="32"
                   fill="currentColor"
-                  // className="bi bi-chevron-down"
                   className={
                     activeIndexes.includes(tab.id)
                       ? "bi bi-chevron-down arrow_flip"
@@ -119,11 +118,6 @@ function Tabs() {
                     ? "case_description show"
                     : "case_description"
                 }
-                // className={
-                //   toggleBrand === tab.id
-                //     ? "case_description show"
-                //     : "case_description"
-                // }
               >
                 <div className="individual-content">
                   <h4>Project Overview</h4>

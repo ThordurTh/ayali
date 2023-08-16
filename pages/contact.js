@@ -54,12 +54,7 @@ function contact({ setActiveLink, lang }) {
           <ContactForm predefinedSubject={predefinedSubject} lang={lang} />
         </div>
         <div className="contact_image">
-          <Image
-            src={contactPhoto}
-            alt="portrait of AYA LI"
-            width={600}
-            height={780}
-          />
+          <Image src={contactPhoto} alt="portrait of AYA LI" />
         </div>
       </div>
       <FooterNav
