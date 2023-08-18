@@ -60,10 +60,10 @@ function ContactForm({ predefinedSubject, lang }) {
 
     emailjs
       .sendForm(
-        "service_qw65rr9",
-        "template_jy5zoa9",
+        "service_4du645j",
+        "template_u84rsg9",
         e.target,
-        "kIxaz89gws325fceG"
+        "wJyr3kQ2VSZBKNJDL"
       )
       .then(
         (result) => {
