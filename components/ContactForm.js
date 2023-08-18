@@ -1,7 +1,10 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+// import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 
 function ContactForm({ predefinedSubject, lang }) {
+  const router = useRouter();
   const [inputValues, setInputValues] = useState({
     firstName: "",
     lastName: "",
@@ -54,25 +57,48 @@ function ContactForm({ predefinedSubject, lang }) {
       setErrorMessage("Please check the checkbox");
     }
   };
-  const form = useRef();
-  const handleFormSubmit = (e) => {
+  // const form = useRef();
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
     setInvalidInputs([]);
 
-    emailjs
-      .sendForm(
-        "service_qw65rr9",
-        "template_jy5zoa9",
+    const serviceID = "service_pfsn7z9";
+    const templateID = "template_5liifgr";
+    const userID = "0xyDruUqlp_8vemyB";
+
+    try {
+      const response = await emailjs.sendForm(
+        serviceID,
+        templateID,
         e.target,
-        "kIxaz89gws325fceG"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        userID
       );
+      console.log("Email sent successfully:", response);
+
+      // Redirect to the success page
+      router.push(`/success?name=${inputValues.firstName}`);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+
+    // emailjs.sendForm(
+    //     serviceID,
+    //     // "service_qw65rr9",
+    //     templateID,
+    //     // "template_jy5zoa9",
+    //     e.target,
+    //     userID
+    //     // "kIxaz89gws325fceG"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
@@ -80,7 +106,7 @@ function ContactForm({ predefinedSubject, lang }) {
       name="contact"
       method="post"
       data-netlify="true"
-      action={`/success?name=${inputValues.firstName}`}
+      // action={`/success?name=${inputValues.firstName}`}
       onSubmit={handleFormSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
