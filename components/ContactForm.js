@@ -63,23 +63,23 @@ function ContactForm({ predefinedSubject, lang }) {
     e.preventDefault();
     setInvalidInputs([]);
 
-    const serviceID = "service_pfsn7z9";
-    const templateID = "template_5liifgr";
+    const serviceID = process.env.serviceID;
+    const userTemplateID = "template_5liifgr";
+    const selfTemplateID = "template_ujus23b";
     const userID = "0xyDruUqlp_8vemyB";
 
     try {
-      const response = await emailjs.sendForm(
-        serviceID,
-        templateID,
-        e.target,
-        userID
-      );
-      console.log("Email sent successfully:", response);
+      // Send email to user
+      await emailjs.sendForm(serviceID, userTemplateID, e.target, userID);
 
-      // Redirect to the success page
-      router.push(`/success?name=${inputValues.firstName}`);
+      // Send email to yourself
+      await emailjs.sendForm(serviceID, selfTemplateID, e.target, userID);
+
+      console.log("Emails sent successfully.");
+
+      // Optionally redirect to success page or show a success message
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error sending emails:", error);
     }
 
     // emailjs.sendForm(
